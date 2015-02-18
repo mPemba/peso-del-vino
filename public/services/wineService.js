@@ -143,8 +143,64 @@ this.getLemonFishWine = function() {
  	})
  }
 /*   CRUSTACEAN PAIRING    */
+this.getCrabWine = function() {
+	return $http({
+		method: 'GET',
+		url: wineUrl + 'q=riesling'
+	})
+}
 
+this.getLobsterWine = function() {
+	return $http({
+		method: 'GET',
+		url: wineUrl + 'q=chardonay'
+	})
+}
 
+this.getOysterWine = function() {
+	return $http({
+		method: 'GET',
+		url: wineUrl + 'q=savignon+blanc'
+	})
+}
+this.getShrimpWine = function() {
+	return $http({
+		method: 'GET',
+		url: wineUrl + 'q=pinot+blanc'
+	})
+}
+this.getScallopWine = function() {
+	return $http({
+		method: 'GET',
+		url: wineUrl + 'q=savignon+blanc'
+	})
+}
+/*   PASTA PAIRING    */
+this.getLasagneWine = function() {
+	return $http({
+		method: 'GET',
+		url: wineUrl + 'q=barolo'
+	})
+}
+this.getWhitePastaWine = function() {
+	return $http({
+		method: 'GET',
+		url: wineUrl + 'q=pino+grigio'
+	})
+}
+this.getTomatoPastaWine = function() {
+	return $http({
+		method: 'GET',
+		url: wineUrl + 'q=sangiovese'
+	})
+}
+this.getFishPastaWine = function() {
+	return $http({
+		method: 'GET',
+		url: wineUrl + 'q=pino+grigio'
+	})
+}
+/*     VEGGIE PAIRING     */
 
 
 

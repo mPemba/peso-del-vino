@@ -17,8 +17,9 @@
 .btn {
 	height: 30px;
 	width: 150px;
-	border: 1.5px solid black;
+	border: 1px solid black;
 	background: none;
+	margin: 0px 5px 0px 5px;
 }
 .navbar {
 	display: flex;
@@ -33,6 +34,7 @@
 	color: black;
 	font-family: sans-serif;
 	text-decoration: none;
+	letter-spacing: 2px;
 }
 .food-headline {
 	text-align: center;
