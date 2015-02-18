@@ -1,0 +1,35 @@
+/** {
+	outline: 1px dotted blue;
+}*/
+.main-headline-container {
+	text-align: center;
+}
+.main-headline {
+	font-family: verdana;
+	letter-spacing: 4px;
+	font-weight: lighter;
+}
+.main-sub-headline {
+	font-family: 'sans-serif';
+	letter-spacing: 1.5px;
+}
+.navbar {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+.navbar-link {
+	margin: 0px 10px 0px 10px;
+	list-style-type: none;
+}
+.food-headline {
+	text-align: center;
+	font-family: "Didot", sans-serif;
+	letter-spacing: 4px;
+	font-weight: lighter;
+}
+.form-control {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
