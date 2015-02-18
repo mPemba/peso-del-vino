@@ -12,39 +12,39 @@ app.config(function($routeProvider) {
 	})
 	.when('/pork', {
 		templateUrl: 'tmpls/pork.html',
-		controller: 'mainCtrl'
+		controller: 'porkCtrl'
 	})
 	.when('/lamb', {
 		templateUrl: 'tmpls/lamb.html',
-		controller: 'mainCtrl'
+		controller: 'lambCtrl'
 	})
 	.when('/poultry', {
 		templateUrl: 'tmpls/poultry.html',
-		controller: 'mainCtrl'
+		controller: 'poultryCtrl'
 	})
 	.when('/fish', {
 		templateUrl: 'tmpls/fish.html',
-		controller: 'mainCtrl'
+		controller: 'fishCtrl'
 	})
 	.when('/crustaceans', {
 		templateUrl: 'tmpls/crustaceans.html',
-		controller: 'mainCtrl'
+		controller: 'crustCtrl'
 	})
 	.when('/pasta', {
 		templateUrl: 'tmpls/pasta.html',
-		controller: 'mainCtrl'
+		controller: 'pastaCtrl'
 	})
 	.when('/veggies', {
 		templateUrl: 'tmpls/veggies.html',
-		controller: 'mainCtrl'
+		controller: 'veggiesCtrl'
 	})
 	.when('/cheese', {
 		templateUrl: 'tmpls/cheese.html',
-		controller: 'mainCtrl'
+		controller: 'cheeseCtrl'
 	})
 	.when('/dessert', {
 		templateUrl: 'tmpls/dessert.html',
-		controller: 'mainCtrl'
+		controller: 'dessertCtrl'
 	})
 	.otherwise({
 		redirectTo: '/'

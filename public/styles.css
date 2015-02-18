@@ -6,12 +6,19 @@
 }
 .main-headline {
 	font-family: verdana;
-	letter-spacing: 4px;
+	letter-spacing: 5px;
 	font-weight: lighter;
 }
 .main-sub-headline {
 	font-family: 'sans-serif';
 	letter-spacing: 1.5px;
+	font-weight: lighter;
+}
+.btn {
+	height: 30px;
+	width: 150px;
+	border: 1.5px solid black;
+	background: none;
 }
 .navbar {
 	display: flex;
@@ -21,6 +28,11 @@
 .navbar-link {
 	margin: 0px 10px 0px 10px;
 	list-style-type: none;
+}
+.link {
+	color: black;
+	font-family: sans-serif;
+	text-decoration: none;
 }
 .food-headline {
 	text-align: center;
@@ -32,4 +44,8 @@
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
+}
+.wine-details {
+	list-style-type: none;
+	font-family: sans-serif;
 }

@@ -1,12 +1,10 @@
 var app = angular.module('vino');
 
-app.controller('beefCtrl', function($scope, wineService) {
+app.controller('fishCtrl', function($scope, wineService) {
 
-
-
-$scope.getSimpleBeef = function() {
+$scope.getRichFish = function() {
 	var grapeArray = [];
-	wineService.getSimpleBeefWine($scope.grape).then(function(res) {
+	wineService.getRichFishWine($scope.grape).then(function(res) {
 		$scope.grapeData = res.data.wines;
 		var grapeData = $scope.grapeData;
 		for (var key in grapeData) {
@@ -23,9 +21,9 @@ $scope.getSimpleBeef = function() {
 	})
 }
 
-$scope.getSlowCookBeef = function() {
+$scope.getLemonFish = function() {
 	var grapeArray = [];
-	wineService.getSlowCookBeefWine($scope.grape).then(function(res) {
+	wineService.getLemonFishWine($scope.grape).then(function(res) {
 		$scope.grapeData = res.data.wines;
 		var grapeData = $scope.grapeData;
 		for (var key in grapeData) {
@@ -42,9 +40,9 @@ $scope.getSlowCookBeef = function() {
 	})
 }
 
-$scope.getPrimeRib = function() {
+$scope.getGrilledSalm = function() {
 	var grapeArray = [];
-	wineService.getPrimeRibWine($scope.grape).then(function(res) {
+	wineService.getGrilledSalmWine($scope.grape).then(function(res) {
 		$scope.grapeData = res.data.wines;
 		var grapeData = $scope.grapeData;
 		for (var key in grapeData) {
@@ -61,9 +59,28 @@ $scope.getPrimeRib = function() {
 	})
 }
 
-$scope.getTenderloin = function() {
+$scope.getBlackSalm = function() {
 	var grapeArray = [];
-	wineService.getTenderloinWine($scope.grape).then(function(res) {
+	wineService.getBlackSalmWine($scope.grape).then(function(res) {
+		$scope.grapeData = res.data.wines;
+		var grapeData = $scope.grapeData;
+		for (var key in grapeData) {
+			grapeArray.push({
+				image: grapeData[key].image,
+				name: grapeData[key].name,
+				price: grapeData[key].price,
+				region: grapeData[key].region,
+				varietal: grapeData[key].varietal,
+				vintage: grapeData[key].vintage
+			})
+		}
+		$scope.wineData = grapeArray;
+	})
+}
+
+$scope.getRichSalm = function() {
+	var grapeArray = [];
+	wineService.getRichSalmWine($scope.grape).then(function(res) {
 		$scope.grapeData = res.data.wines;
 		var grapeData = $scope.grapeData;
 		for (var key in grapeData) {

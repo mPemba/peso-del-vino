@@ -1,12 +1,10 @@
 var app = angular.module('vino');
 
-app.controller('beefCtrl', function($scope, wineService) {
+app.controller('poultryCtrl', function($scope, wineService) {
 
-
-
-$scope.getSimpleBeef = function() {
+$scope.getFriedChk = function() {
 	var grapeArray = [];
-	wineService.getSimpleBeefWine($scope.grape).then(function(res) {
+	wineService.getFriedChkWine($scope.grape).then(function(res) {
 		$scope.grapeData = res.data.wines;
 		var grapeData = $scope.grapeData;
 		for (var key in grapeData) {
@@ -23,9 +21,9 @@ $scope.getSimpleBeef = function() {
 	})
 }
 
-$scope.getSlowCookBeef = function() {
+$scope.getSpicyChk = function() {
 	var grapeArray = [];
-	wineService.getSlowCookBeefWine($scope.grape).then(function(res) {
+	wineService.getSpicyChkWine($scope.grape).then(function(res) {
 		$scope.grapeData = res.data.wines;
 		var grapeData = $scope.grapeData;
 		for (var key in grapeData) {
@@ -42,9 +40,9 @@ $scope.getSlowCookBeef = function() {
 	})
 }
 
-$scope.getPrimeRib = function() {
+$scope.getRoastChk = function() {
 	var grapeArray = [];
-	wineService.getPrimeRibWine($scope.grape).then(function(res) {
+	wineService.getRoastChkWine($scope.grape).then(function(res) {
 		$scope.grapeData = res.data.wines;
 		var grapeData = $scope.grapeData;
 		for (var key in grapeData) {
@@ -61,9 +59,9 @@ $scope.getPrimeRib = function() {
 	})
 }
 
-$scope.getTenderloin = function() {
+$scope.getDuck = function() {
 	var grapeArray = [];
-	wineService.getTenderloinWine($scope.grape).then(function(res) {
+	wineService.getDuckWine($scope.grape).then(function(res) {
 		$scope.grapeData = res.data.wines;
 		var grapeData = $scope.grapeData;
 		for (var key in grapeData) {
