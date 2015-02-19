@@ -46,6 +46,10 @@ app.config(function($routeProvider) {
 		templateUrl: 'tmpls/dessert.html',
 		controller: 'dessertCtrl'
 	})
+	.when('/auth', {
+		templateUrl: '/tmpls/auth.html',
+		controller: 'authCtrl'
+	})
 	.otherwise({
 		redirectTo: '/'
 	})
