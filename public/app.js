@@ -2,9 +2,13 @@ var app = angular.module('vino', ["ngRoute"]);
 
 app.config(function($routeProvider) {
 	$routeProvider
-	.when('/', {
-		templateUrl: 'tmpls/home.html',
-		controller: 'mainCtrl'
+	.when('/auth', {
+		templateUrl: '/tmpls/auth.html',
+		controller: 'authCtrl'
+	})
+	.when('/profile', {
+		templateUrl: 'tmpls/profile.html',
+		controller: 'profileCtrl'
 	})
 	.when('/beef', {
 		templateUrl: 'tmpls/beef.html',
@@ -46,11 +50,7 @@ app.config(function($routeProvider) {
 		templateUrl: 'tmpls/dessert.html',
 		controller: 'dessertCtrl'
 	})
-	.when('/auth', {
-		templateUrl: '/tmpls/auth.html',
-		controller: 'authCtrl'
-	})
 	.otherwise({
-		redirectTo: '/'
+		redirectTo: '/home'
 	})
 })
