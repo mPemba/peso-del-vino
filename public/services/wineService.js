@@ -202,6 +202,56 @@ this.getFishPastaWine = function() {
 }
 /*     VEGGIE PAIRING     */
 
+this.getRootWine = function() {
+	return $http({
+		method: 'GET',
+		url: wineUrl + 'q=pino+noir'
+	})
+}
+this.getAvocadoWine = function() {
+	return $http({
+		method: 'GET',
+		url: wineUrl + 'q=sauvignon+blanc+zealand'
+	})
+}
+this.getEggplantWine = function() {
+	return $http({
+		method: 'GET',
+		url: wineUrl + 'q=dolcetto'
+	})
+}
+this.getBeanWine = function() {
+	return $http({
+		method: 'GET',
+		url: wineUrl + 'q=shiraz+syrah'
+	})
+}
+this.getTomatoWine = function() {
+	return $http({
+		method: 'GET',
+		url: wineUrl + 'q=rioja'
+	})
+}
+this.getBleuCheeseWine = function() {
+	return $http({
+		method: 'GET',
+		url: wineUrl + 'q=sauternes'
+	})
+}
+this.getHardCheeseWine = function() {
+	return $http({
+		method: 'GET',
+		url: wineUrl + 'q=amarone'
+	})
+}
+this.getSoftCheeseWine = function() {
+	return $http({
+		method: 'GET',
+		url: wineUrl + 'q=riesling&q=sauvignon+blanc'
+	})
+}
+
+
 
 
 })
