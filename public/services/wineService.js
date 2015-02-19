@@ -250,7 +250,19 @@ this.getSoftCheeseWine = function() {
 		url: wineUrl + 'q=riesling&q=sauvignon+blanc'
 	})
 }
-
+/*    DESSERT PAIRING    */
+this.getChocolateWine = function() {
+	return $http({
+		method: 'GET',
+		url: wineUrl + 'q=port'
+	})
+}
+this.getDulceDeLecheWine = function() {
+	return $http({
+		method: 'GET',
+		url: wineUrl + 'q=madeira'
+	})
+}
 
 
 
