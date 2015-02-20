@@ -1,25 +1,48 @@
 /** {
 	outline: 1px dotted blue;
-}*/
+}
+*/html, body {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	width: 100%;
+}
 .main-headline-container {
+	background-image: url('/images/grapesOne.jpg');
+	background-position: center;
+	height: 400px;
+	width: 100%;
 	text-align: center;
 }
 .main-headline {
-	font-family: verdana;
-	letter-spacing: 5px;
+	font-family: sans-serif;
+	margin: 0 auto;
+	color: #fff;
+	padding-top: 150px;
+	letter-spacing: 10px;
 	font-weight: lighter;
+	font-size: 6rem;
 }
 .main-sub-headline {
-	font-family: 'sans-serif';
+	font-family: 'Didot';
 	letter-spacing: 1.5px;
 	font-weight: lighter;
 }
+.sub-headline-container {
+	font-family: sans-serif;
+	text-align: center;
+}
 .btn {
+	font-family: sans-serif;
 	height: 30px;
 	width: 150px;
-	border: 1s262px solid black;
+	border: 1.5px solid black;
 	background: none;
 	margin: 0px 5px 0px 5px;
+}
+.btn:hover {
+	color: #fff;
+	background: black;
 }
 .navbar {
 	display: flex;
@@ -27,14 +50,29 @@
 	justify-content: center;
 }
 .navbar-link {
+	height: 16px;
+	border-left: 1px solid black;
+	border-right: 1px solid black;
 	margin: 0px 10px 0px 10px;
 	list-style-type: none;
 }
+.header-link {
+	list-style-type: none;
+	text-align: center;
+	margin-right: 35px;
+	text-decoration: none;
+	letter-spacing: 2px;
+}
 .link {
+	padding-left: 8px;
+	padding-right: 8px;
 	color: black;
 	font-family: sans-serif;
 	text-decoration: none;
 	letter-spacing: 2px;
+}
+.link:hover {
+	font-weight: lighter;
 }
 .food-headline {
 	text-align: center;
@@ -50,4 +88,22 @@
 .wine-details {
 	list-style-type: none;
 	font-family: sans-serif;
+}
+.wine-view {
+	padding: 10px;
+	padding-bottom: 60px;
+}
+.footer {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 60px;
+	background: hsl(359, 18%, 41%);
+}
+.logo-foot {
+	float: right;
+	margin-right: 10px;
+	margin-top: 5px;
+	height: 50px;
+	width: 65px;
 }

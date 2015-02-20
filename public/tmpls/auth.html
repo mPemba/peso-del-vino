@@ -1,0 +1,28 @@
+<div>
+  <h2>auth page</h2>
+</div>
+<div>
+  <form>
+      <label>Email:</label>
+      <input type="text" ng-model="email"/>
+
+      <label>Password:</label>
+      <input type="text" ng-model="password"/>
+  </form>
+
+  <div ng-if="state === 'register'">
+      <button class="btn" ng-click="clickRegister()">Register</button>
+      <div>Need to <a ng-click="changeState('login')">login instead?</a></div>
+  </div>
+  <div ng-if="state === 'login'">
+      <button class="btn" ng-click="clickLogin()">Login</button>
+      <div>Need to <a ng-click="changeState('register')">register instead?</a></div>
+  </div>
+</div>
+
+<!-- 		<div class="row bg-warning" ng-if="loginError">
+			Login failed.
+		</div>
+		<div class="row bg-warning" ng-if="regError">
+			Registration failed.
+		</div> -->

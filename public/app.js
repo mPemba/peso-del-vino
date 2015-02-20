@@ -51,6 +51,6 @@ app.config(function($routeProvider) {
 		controller: 'dessertCtrl'
 	})
 	.otherwise({
-		redirectTo: '/home'
+		redirectTo: '/auth'
 	})
 })

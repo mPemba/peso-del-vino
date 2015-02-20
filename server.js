@@ -9,7 +9,8 @@ var port = 8666;
 var app = express();
 
 var user = require('/api/models/user');
-var userController = require('/api/controllers/userCtrl.js');
+var userCtrl = require('/api/controllers/userCtrl.js');
+var profileCtrl = require('/api/controllers/profileCtrl.js');
 
 mongoose.connect('');
 
@@ -65,7 +66,7 @@ var isAuthed = function(req, res, next) {
 	}
 }
 
-app.get('/api/profile', isAuthed, userController.profile);
+app.get('/api/profile', isAuthed, userCtrl.profile);
 
 app.listen(port, function() {
 	console.log('listening on port ' + port);
