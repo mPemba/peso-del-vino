@@ -8,7 +8,12 @@ app.config(function($routeProvider) {
 	})
 	.when('/profile', {
 		templateUrl: 'tmpls/profile.html',
-		controller: 'profileCtrl'
+		controller: 'profileCtrl',
+		resolve: {
+			profile: function(profileService) {
+				return profileService.getProfile();
+			}
+		}
 	})
 	.when('/beef', {
 		templateUrl: 'tmpls/beef.html',

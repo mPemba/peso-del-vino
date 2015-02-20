@@ -8,11 +8,11 @@ var mongoose = require('mongoose');
 var port = 8666;
 var app = express();
 
-var user = require('/api/models/user');
+var user = require('./api/models/user');
 var userCtrl = require('/api/controllers/userCtrl.js');
 var profileCtrl = require('/api/controllers/profileCtrl.js');
 
-mongoose.connect('');
+mongoose.connect('mongodb://localhost');
 
 passport.use(new localStrategy({
 	usernameField: 'email',
