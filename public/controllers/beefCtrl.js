@@ -9,6 +9,7 @@ $scope.getSimpleBeef = function() {
 	wineService.getSimpleBeefWine($scope.grape).then(function(res) {
 		$scope.grapeData = res.data.wines;
 		var grapeData = $scope.grapeData;
+		console.log(grapeData);
 		for (var key in grapeData) {
 			grapeArray.push({
 				image: grapeData[key].image,

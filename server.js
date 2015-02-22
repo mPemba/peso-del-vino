@@ -8,9 +8,9 @@ var mongoose = require('mongoose');
 var port = 8666;
 var app = express();
 
-var user = require('./api/models/user');
-var userCtrl = require('/api/controllers/userCtrl.js');
-var profileCtrl = require('/api/controllers/profileCtrl.js');
+var user = require('/api/models/user');
+var userCtrl = require('/api/controllers/userCtrl');
+// var profileCtrl = require('/api/controllers/profileCtrl.js');
 
 mongoose.connect('mongodb://localhost');
 
@@ -43,7 +43,7 @@ app.use(express.static(__dirname + '/public'));
 app.use(bodyParser.json());
 app.use(session({
 	secret: '6661111YO∆LA∆TENGO∆is∆super∆rad1111666'
-}))
+}));
 app.use(passport.initialize());
 app.use(passport.session());
 
@@ -59,7 +59,6 @@ app.post('/api/register', function(req, res) {
 		return res.json(user);
 	})
 })
-
 var isAuthed = function(req, res, next) {
 	if (!req.isAuthenticated()) {
 		return res.status(403).end();
