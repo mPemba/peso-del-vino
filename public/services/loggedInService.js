@@ -3,7 +3,7 @@ var app = angular.module('vino');
 app.service('loggedInService', function($http, $q) {
 	this.logMeOut = function() {
 		var dfd = $q.defer();
-		console.log('logout almose resolved');
+		console.log('logout almost resolved');
 		$http({
 			method: 'GET',
 			url: '/api/logout'

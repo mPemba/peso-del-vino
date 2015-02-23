@@ -152,64 +152,39 @@ html, body {
 	display: flex;
 	flex-direction: column;
 }
+.auth-label {
+	font-family: sans-serif;
+}
 .auth-form-input {
 	margin: 0 auto;
+	margin-bottom: 10px;
 	width: 200px;
 	height: 25px;
 	background: none;
 	border: 2px solid hsl(20, 30%, 27%);
-}
-.auth-input-btn {
-	margin: 0 auto;
-	width: 200px;
-	height: 25px;
-	background: none;
-	border: 2px solid hsl(20, 30%, 27%);
-}
-.profile-headline {
-	font-family: 'Great Vibes', cursive;
-}
-.profile-container {
 	text-align: center;
 }
-.profile-form {
-	display: flex;
-	flex-direction: column;
-}
-.profile-form-input {
+.auth-input-btn {
+	font-family: sans-serif;
+	font-size: 1rem;
 	margin: 0 auto;
-	width: 200px;
-	height: 25px;
-	background: none;
-	border: 2px solid hsl(20, 30%, 27%);
-}
-.profile-input-btn {
-	margin: 0 auto;
+	margin-bottom: 10px;
 	width: 208px;
 	height: 28px;
 	background: none;
 	border: 2px solid hsl(20, 30%, 27%);
 }
-.profile-input-btn:hover {
-	background: hsl(45, 63%, 58%);
-}
-.profile-input-heads {
-	font-family: sans-serif;
-	margin-bottom: 5px;
-	margin-top: 2px;
-}
-#email:hover {
-	background: hsl(71, 76%, 75%);
-}
-#gender:hover {
-	background: hsl(347, 77%, 17%);
+.auth-input-btn:hover {
+	background-color: hsl(351, 71%, 35%);
 	color: hsl(36, 100%, 95%);
 }
-#age:hover {
-	background: hsl(56, 81%, 69%);
+#email:hover {
+	background: hsl(347, 77%, 17%);
+	color: hsl(36, 100%, 95%);
+	border: 2px solid hsl(20, 30%, 27%);
 }
-#bio:hover {
-	background: hsl(351, 71%, 35%);
+#password:hover {
+	background: hsl(56, 81%, 69%);
 }
 .auth-container {
 	text-align: center;

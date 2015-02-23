@@ -7,7 +7,7 @@
   <link href='http://fonts.googleapis.com/css?family=Libre+Baskerville' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="styles.css" type="text/css"/>
 </head>
-<body>
+<body ng-controller="loggedInCtrl">
 
 <div class="main-headline-container">
   <h1 class="main-headline">PESO DEL VINO</h1>
@@ -15,8 +15,8 @@
 
 <ul class="navbar">
   <li class="header-link"> <a class="link" href="/#/home">Home</a> </li>
-  <li class="header-link"> <a class="link" href="/#/profile">Profile</a> </li>
-  <li class="header-link"> <button ng-click="logout()">Log Out</button> </li>
+<!--   <li class="header-link"> <a class="link" href="/#/profile">Profile</a> </li> -->
+  <li class="header-link"> <button class="logout-btn" ng-click="logout()">Log Out</button> </li>
 </ul>
 
 <hr>
@@ -62,9 +62,7 @@
 <script src="controllers/authCtrl.js"></script>
 <script src="controllers/loggedInCtrl.js"></script>
 <script src="services/loggedInService.js"></script>
-<script src="services/profileService.js"></script>
 <script src="services/authService.js"></script>
-<!-- <script src="services/auth.js"></script> -->
 <script src="services/wineService.js"></script>
 </body>
 </html>

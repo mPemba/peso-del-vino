@@ -10,15 +10,6 @@ app.config(function($routeProvider) {
 		templateUrl: '/tmpls/home.html',
 		controller: 'loggedInCtrl'
 	})
-	.when('/profile', {
-		templateUrl: 'tmpls/profile.html',
-		controller: 'profileCtrl',
-		resolve: {
-			profile: function(profileService) {
-				return profileService.getProfile();
-			}
-		}
-	})
 	.when('/beef', {
 		templateUrl: 'tmpls/beef.html',
 		controller: 'beefCtrl'

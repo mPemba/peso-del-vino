@@ -61,14 +61,18 @@ app.post('/api/register', function(req, res) {
 		return res.json(user);
 	})
 })
-// var isAuthed = function(req, res, next) {
-// 	if (!req.isAuthenticated()) {
-// 		return res.status(403).end();
-// 	}
-// }
-
+var isAuthed = function(req, res, next) {
+	if (!req.isAuthenticated()) {
+		return res.status(403).end();
+	}
+}
+app.get('/api/logout', function(req, res) {
+	req.logout();
+	res.status(200).end();
+	// res.redirect('/auth');
+})
 // app.get('/api/profile', isAuthed, userCtrl.profile);
-// app.get('/api/user', userCtrl.get);
+app.get('/api/user', userCtrl.get);
 
 
 app.listen(port, function() {
