@@ -1,31 +1,34 @@
+<div class="outer-wine-contatiner">
+
 <h1 class="food-headline">Pasta Pairing</h1>
 
-<div class="form-control">
-  <form>
-    <button class="btn" ng-click="getLasagne()">Lasagne</button>
-  </form>
-  <form>
-    <button class="btn" ng-click="getWhitePasta()">Cream Sauce</button>
-  </form>
-  <form>
-    <button class="btn" ng-click="getTomatoPasta()">Tomato Sauce</button>
-  </form>
-  <form>
-    <button class="btn" ng-click="getFishPasta()">Pasta with Fish</button>
-  </form>
-</div>
+  <div class="form-control">
+    <form>
+        <button class="btn" ng-click="getLasagne()">Lasagne</button>
+    </form>
+    <form>
+        <button class="btn" ng-click="getWhitePasta()">Cream Sauce</button>
+    </form>
+    <form>
+        <button class="btn" ng-click="getTomatoPasta()">Tomato Sauce</button>
+    </form>
+    <form>
+        <button class="btn" ng-click="getFishPasta()">Pasta with Fish</button>
+    </form>
+  </div>
 
-<div class="outer-wine-contatiner">
+
     <div class="wine-container" ng-repeat="key in wineData">
-      <div class="wine"> 
-          <img ng-src="{{key.image}}">
-          <ul>
+      <div class="wine-container"> 
+          <ul class="wine">
+            <li class="wine-pic-frame"><img class="wine-pic" ng-src="{{key.image}}"></li>
             <li class="wine-details">{{key.name}}</li>
             <li class="wine-details">${{key.price}}</li>
             <li class="wine-details">{{key.varietal}}</li>
             <li class="wine-details">{{key.vintage}}</li>
-            <li class="wine-details">{{key.region}}</li>
+<!--             <li class="wine-details">{{key.region}}</li> -->
           </ul>
       </div>
     </div>
+
 </div>

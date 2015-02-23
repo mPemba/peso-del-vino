@@ -8,17 +8,19 @@ var mongoose = require('mongoose');
 var port = 8666;
 var app = express();
 
-var user = require('/api/models/user');
-var userCtrl = require('/api/controllers/userCtrl');
-// var profileCtrl = require('/api/controllers/profileCtrl.js');
+app.use(express.static(__dirname + '/public'));
+var User = require('./api/models/userModel');
+var userCtrl = require('./api/controllers/userCtrl');
+var profileCtrl = require('./api/controllers/profileCtrl.js');
 
-mongoose.connect('mongodb://localhost');
+
+mongoose.connect('mongodb://localhost/pesoDelVino');
 
 passport.use(new localStrategy({
 	usernameField: 'email',
 	passwordField: 'password'
 }, function(username, password, done) {
-	user.findOne({email: username}).exec().then(function(user) {
+	User.findOne({email: username}).exec().then(function(user) {
 		if (!user) {
 			return done(null, false);
 			alert('who are you?');
@@ -39,7 +41,7 @@ passport.deserializeUser(function(obj, done) {
 	done(null, obj);
 })
 
-app.use(express.static(__dirname + '/public'));
+
 app.use(bodyParser.json());
 app.use(session({
 	secret: '6661111YO∆LA∆TENGO∆is∆super∆rad1111666'
@@ -51,7 +53,7 @@ app.post('/api/auth', passport.authenticate('local'), function(req, res) {
 	return res.status(200).end();
 })
 app.post('/api/register', function(req, res) {
-	var newUser = new user(req.body);
+	var newUser = new User(req.body);
 	newUser.save(function(err, user) {
 		if (err) {
 			return res.status(500).end();
@@ -59,13 +61,15 @@ app.post('/api/register', function(req, res) {
 		return res.json(user);
 	})
 })
-var isAuthed = function(req, res, next) {
-	if (!req.isAuthenticated()) {
-		return res.status(403).end();
-	}
-}
+// var isAuthed = function(req, res, next) {
+// 	if (!req.isAuthenticated()) {
+// 		return res.status(403).end();
+// 	}
+// }
 
-app.get('/api/profile', isAuthed, userCtrl.profile);
+// app.get('/api/profile', isAuthed, userCtrl.profile);
+// app.get('/api/user', userCtrl.get);
+
 
 app.listen(port, function() {
 	console.log('listening on port ' + port);

@@ -1,20 +1,26 @@
 <div class="profile-container">
   <div class="headline">
-    <h1>My Profile</h1>
+    <h1 class="profile-headline">My Profile</h1>
   </div>
-  <form>
-    <label>Email:</label>
-    <input type="text" ng-model="profile.email"/>
+  <form class="profile-form">
+    <label class="profile-input-heads">Email:</label>
+    <input type="text" class="profile-form-input" id="email" ng-model="profile.email"/>
 
-    <label>Gender:</label>
-    <input type="text" ng-model="profile.gender"/>
+    <label class="profile-input-heads">Gender:</label>
+    <input type="text" class="profile-form-input" id="gender" ng-model="profile.gender"/>
 
-    <label>Age:</label>
-    <input type="text" ng-model="profile.age"/>
+    <label class="profile-input-heads">Age:</label>
+    <input type="text" class="profile-form-input" id="age" ng-model="profile.age"/>
 
-    <label>Bio:</label>
-    <input type="text" ng-model="profile.bio"/>
-
-    <button type="submit" class="btn">Submit</button>
+    <label class="profile-input-heads">Bio:</label>
+    <input type="text" class="profile-form-input" id="bio" ng-model="profile.bio"/>
+    <br>
+    <button type="submit" class="profile-input-btn">Submit</button>
   </form>
+</div>
+
+<div class="footer">
+  <footer>
+    <img class="logo-foot" src="/images/pembaDesign.png"/>
+  </footer>
 </div>

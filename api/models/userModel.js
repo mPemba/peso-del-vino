@@ -9,7 +9,7 @@ var schema = new Schema({
 	gender: String,
 	age: Number,
 	bio: String
-});
+})
 
 schema.pre('save', function(next) {
 	var user = this;
