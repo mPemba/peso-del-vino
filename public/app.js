@@ -8,7 +8,7 @@ app.config(function($routeProvider) {
 	})
 	.when('/home', {
 		templateUrl: '/tmpls/home.html',
-		controller: 'authCtrl'
+		controller: 'loggedInCtrl'
 	})
 	.when('/profile', {
 		templateUrl: 'tmpls/profile.html',

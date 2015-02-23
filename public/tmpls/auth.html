@@ -1,6 +1,7 @@
-<div>
+<!-- <div>
   <h2>auth page</h2>
 </div>
+
 <div>
   <form>
       <label>Email:</label>
@@ -12,18 +13,56 @@
 
   <div ng-if="state === 'register'">
       <button ng-click="clickRegister()">Register</button>
-      <div>Need to <a ng-click="changeState('login')">login instead?</a></div>
+      <div> Need to <a ng-click="changeState('login')">login instead?</a>
+      </div>
   </div>
+
   <div ng-if="state === 'login'">
       <button ng-click="clickLogin()">Login</button>
       <div>Need to <a ng-click="changeState('register')">register instead?</a></div>
   </div>
+
   <div class="row bg-warning" ng-if="loginError">
 	Login failed.
   </div>
+
   <div class="row bg-warning" ng-if="regError">
   	Registration failed.
   </div>
-</div>
 
+</div> -->
+
+<div class="auth-container">
+  <h1 class="auth-headline">Login or Register</h1>
+  <div>
+    <form class="auth-form">
+      <label class="profile-input-heads">Email:</label>
+      <input type="text" class="auth-form-input" ng-model="email"/>
+
+      <label class="profile-input-heads">Password:</label>
+      <input type="text" class="auth-form-input" ng-model="password"/>
+    </form>
+
+    <div ng-if="state === 'register'">
+      <button class="auth-input-btn" ng-click="clickRegister()">Register</button>
+      <div>Need to <a ng-click="changeState('login')">login instead</a></div>
+    </div>
+
+    <div ng-if="state === 'login'">
+      <button class="auth-input-btn" ng-click="clickLogin()">Login</button>
+      <div>Need to <a ng-click="changeState('register')">register instead?</a></div>
+    </div>
+
+    <div class="row bg-warning" ng-if="loginError">
+    Login failed.
+    </div>
+
+    <div class="row bg-warning" ng-if="regError">
+    Registration failed.
+    </div>
+
+
+  </div>
+
+</div>
 

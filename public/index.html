@@ -16,6 +16,7 @@
 <ul class="navbar">
   <li class="header-link"> <a class="link" href="/#/home">Home</a> </li>
   <li class="header-link"> <a class="link" href="/#/profile">Profile</a> </li>
+  <li class="header-link"> <button ng-click="logout()">Log Out</button> </li>
 </ul>
 
 <hr>
@@ -59,8 +60,10 @@
 <script src="controllers/cheeseCtrl.js"></script>
 <script src="controllers/dessertCtrl.js"></script>
 <script src="controllers/authCtrl.js"></script>
-<!-- <script src="services/profileService.js"></script>
-<script src="services/authService.js"></script> -->
+<script src="controllers/loggedInCtrl.js"></script>
+<script src="services/loggedInService.js"></script>
+<script src="services/profileService.js"></script>
+<script src="services/authService.js"></script>
 <!-- <script src="services/auth.js"></script> -->
 <script src="services/wineService.js"></script>
 </body>
