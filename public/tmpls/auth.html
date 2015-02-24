@@ -19,11 +19,11 @@
       <div class="login-switcher">Need to <a class="login-switcher-link" ng-click="changeState('register')">register</a> instead?</div>
     </div>
 
-    <div class="row bg-warning" ng-if="loginError">
+    <div class="login-error" ng-if="loginError">
     Login failed.
     </div>
 
-    <div class="row bg-warning" ng-if="regError">
+    <div class="login-error" ng-if="regError">
     Registration failed.
     </div>
 

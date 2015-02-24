@@ -4,7 +4,7 @@ html, body {
   padding: 0;
   height: 2000px;
   width: 100%;
-  background: #f4f0e6; }
+  background: #fff5e5; }
 
 .main-headline-container {
   background-image: url("/images/grapesOne.jpg");
@@ -45,8 +45,8 @@ html, body {
   margin: 0px 5px 0px 5px; }
 
 .btn:hover {
-  color: #f4f0e6;
-  background: #673432;
+  color: #fff5e5;
+  background: #5b1f24;
   font-weight: lighter; }
 
 .navbar {
@@ -146,7 +146,6 @@ html, body {
   padding-bottom: 60px; }
 
 .auth-headline {
-  color: #5a3e30;
   font-size: 2.5rem;
   font-family: "Great Vibes", cursive; }
 
@@ -155,7 +154,6 @@ html, body {
   flex-direction: column; }
 
 .auth-label {
-  color: #5a3e30;
   font-family: sans-serif; }
 
 .auth-form-input {
@@ -177,36 +175,27 @@ html, body {
   width: 208px;
   height: 28px;
   background: none;
-  color: #5a3e30;
   border: 2px solid #5a3e30; }
 
-.login-error {
-  padding-top: 10px;
-  font-size: 1rem;
-  font-family: sans-serif;
-  color: #991a2d; }
-
 .auth-input-btn:hover {
-  background-color: #673432;
-  color: #f4f0e6; }
+  background-color: #991a2d;
+  color: #fff5e5; }
 
 #email:hover {
-  background: #673432;
+  background: #5b1f24;
   color: #fff5e5;
   border: 2px solid #5a3e30; }
 
 #password:hover {
-  background: #d7b650; }
+  background: #f0e770; }
 
 .auth-container {
   text-align: center; }
 
 .login-switcher {
-  color: #5a3e30;
   font-family: sans-serif; }
 
 .login-switcher-link {
-  color: #5a3e30;
   text-decoration: underline; }
 
 .login-switcher-link:hover {
@@ -228,20 +217,19 @@ html, body {
   height: 1600px;
   width: 100%;
   background-position: center;
-  background-repeat: no-repeat;
-  border: 2px solid #305a57; }
+  background-repeat: no-repeat; }
 
 .home-icon {
   padding-top: 20px;
   padding-right: 15px; }
 
 .home-icon-cuts {
-  padding-top: 19px; }
+  padding-top: 10px; }
 
 .home-icon-container {
-  background: #f4f0e6;
+  background: #fff5e5;
   margin: 0 auto;
-  border: 2px solid #305a57;
+  border: 2px solid #5a3e30;
   border-radius: 100%;
   height: 175px;
   width: 175px; }
@@ -268,7 +256,7 @@ html, body {
 .fa {
   text-align: center;
   z-index: 1;
-  color: #f4f0e6;
+  color: #fff5e5;
   margin: 10px 20px 0px 60px;
   height: 30px;
   width: 30px; }

@@ -148,6 +148,7 @@ html, body {
 	padding-bottom: 60px;
 }
 .auth-headline {
+	color: $lightBrown;
 	font-size: 2.5rem;
 	font-family: $great-vibes;
 }
@@ -156,6 +157,7 @@ html, body {
 	flex-direction: column;
 }
 .auth-label {
+	color: $lightBrown;
 	font-family: sans-serif;
 }
 .auth-form-input {
@@ -177,10 +179,17 @@ html, body {
 	width: 208px;
 	height: 28px;
 	background: none;
+	color: $lightBrown;
 	border: $lightBrown-border;
 }
+.login-error {
+	padding-top: 10px;
+	font-size: 1rem;
+	font-family: sans-serif;
+	color: $color-of-error;
+}
 .auth-input-btn:hover {
-	background-color: $medium-wine;
+	background-color: $dark-red-wine;
 	color: $light-background;
 }
 #email:hover {
@@ -189,15 +198,17 @@ html, body {
 	border: 2px solid hsl(20, 30%, 27%);
 }
 #password:hover {
-	background: hsl(56, 81%, 69%);
+	background: $white-wine;
 }
 .auth-container {
 	text-align: center;
 }
 .login-switcher {
+	color: $lightBrown;
 	font-family: sans-serif;
 }
 .login-switcher-link {
+	color: $lightBrown;
 	text-decoration: underline;
 }
 .login-switcher-link:hover {
@@ -220,18 +231,19 @@ html, body {
 	width: 100%;
 	background-position: center;
 	background-repeat: no-repeat;
+	border: 2px solid $complementaryBlue;
 }
 .home-icon {
 	padding-top: 20px;
 	padding-right: 15px;
 }
 .home-icon-cuts {
-	padding-top: 20px;
+	padding-top: 19px;
 }
 .home-icon-container {
 	background: $light-background;
 	margin: 0 auto;
-	border: $lightBrown-border;
+	border: 2px solid $complementaryBlue;
 	border-radius: 100%;
 	height: 175px;
 	width: 175px;
