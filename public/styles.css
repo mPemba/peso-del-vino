@@ -262,3 +262,29 @@ html, body {
 	height: 50px;
 	width: 65px;
 }
+.fa {
+	text-align: center;
+	z-index: 1;
+	color: hsl(36, 100%, 95%);
+	margin: 10px 20px 0px 60px;
+	height: 30px;
+	width: 30px;
+}
+.bandcamp:hover {
+	color: hsl(179, 100%, 44%);
+}
+.soundcloud:hover {
+	color: hsl(18, 100%, 50%);
+}
+.facebook:hover {
+	color: hsl(333, 82%, 59%);
+}
+.github:hover {
+	color: hsl(47, 98%, 54%);
+}
+.gPlus:hover {
+	color: hsl(4, 67%, 52%);
+}
+.linkedin:hover {
+	color: hsl(145, 74%, 47%);
+}
