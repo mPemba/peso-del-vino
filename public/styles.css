@@ -65,6 +65,15 @@ html, body {
 	margin: 0px 10px 0px 10px;
 	list-style-type: none;
 }
+.logout-btn {
+	background: none;
+	border: none;
+	font-size: 1rem;
+	font-family: sans-serif;
+}
+.logout-btn:hover {
+	font-weight: lighter;
+}
 .header-link {
 	color: hsl(20, 30%, 27%);
 	list-style-type: none;
@@ -146,6 +155,7 @@ html, body {
 	padding-bottom: 60px;
 }
 .auth-headline {
+	font-size: 2.5rem;
 	font-family: 'Great Vibes', cursive;
 }
 .auth-form {
@@ -189,10 +199,56 @@ html, body {
 .auth-container {
 	text-align: center;
 }
+.login-switcher {
+	font-family: sans-serif;
+}
+.login-switcher-link {
+	text-decoration: underline;
+}
+.login-switcher-link:hover {
+	font-weight: bold;
+}
+.home-container {
+	text-align: center;
+}
+.home-headline {
+	margin-top: 0px;
+	padding-top: 150px;
+	color: hsl(20, 30%, 27%);
+	font-family: 'Great Vibes', cursive;
+	font-size: 3.5rem;
+}
+.home-photo {
+	margin: 0;
+	background: url(/images/vinyardYo.jpg);
+	height: 1600px;
+	width: 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+.home-icon {
+	padding-top: 20px;
+	padding-right: 15px;
+}
+.home-icon-cuts {
+	padding-top: 20px;
+}
+.home-icon-container {
+	background: hsl(36, 100%, 95%);
+	margin: 0 auto;
+	border: 2px solid hsl(20, 30%, 27%);
+	border-radius: 100%;
+	height: 175px;
+	width: 175px;
+}
+.home-paragraph {
+	line-height: 50px;
+	color: hsl(20, 30%, 27%);
+	letter-spacing: 2px;
+	font-family: sans-serif;
+	font-size: 1.3rem;
+}
 .footer {
-	position: absolute;
-	bottom: 0;
-	left: 0;
 	width: 100%;
 	height: 60px;
 	background: hsl(359, 18%, 41%);
