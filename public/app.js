@@ -1,6 +1,9 @@
 var app = angular.module('vino', ["ngRoute"]);
 
-app.config(function($routeProvider) {
+app.config(function($routeProvider, $httpProvider) {
+	// $httpProvider.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
+	// $httpProvider.interceptors.push('myHttpInterceptor');
+
 	$routeProvider
 	.when('/auth', {
 		templateUrl: '/tmpls/auth.html',
@@ -54,3 +57,14 @@ app.config(function($routeProvider) {
 		redirectTo: '/auth'
 	})
 })
+// .factory('myHttpInterceptor', function($q, $location) {
+// 	return {
+// 		responseError: function(rejection) {
+// 			if (rejection.status === 401) {
+// 				$location.path('/auth');
+// 				return;
+// 			}
+// 			return $q.reject(rejection);
+// 		}
+// 	}
+// })

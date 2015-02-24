@@ -13,6 +13,12 @@ var User = require('./api/models/userModel');
 var userCtrl = require('./api/controllers/userCtrl');
 var profileCtrl = require('./api/controllers/profileCtrl.js');
 
+app.use(bodyParser.json());
+app.use(session({
+	secret: '6661111YO∆LA∆TENGO∆is∆super∆rad1111666'
+}));
+app.use(passport.initialize());
+app.use(passport.session());
 
 mongoose.connect('mongodb://localhost/pesoDelVino');
 
@@ -23,31 +29,22 @@ passport.use(new localStrategy({
 	User.findOne({email: username}).exec().then(function(user) {
 		if (!user) {
 			return done(null, false);
-			alert('who are you?');
 		}
 		user.comparePassword(password).then(function(isMatch) {
 			if (!isMatch) {
 				return done(null, false);
-				alert('wrong. bro.');
 			}
 			return done(null, user);
 		})
 	})
 }))
+// passport.use(auth.strategy);
 passport.serializeUser(function(user, done) {
 	done(null, user);
 })
 passport.deserializeUser(function(obj, done) {
 	done(null, obj);
 })
-
-
-app.use(bodyParser.json());
-app.use(session({
-	secret: '6661111YO∆LA∆TENGO∆is∆super∆rad1111666'
-}));
-app.use(passport.initialize());
-app.use(passport.session());
 
 app.post('/api/auth', passport.authenticate('local'), function(req, res) {
 	return res.status(200).end();
@@ -65,13 +62,14 @@ var isAuthed = function(req, res, next) {
 	if (!req.isAuthenticated()) {
 		return res.status(403).end();
 	}
+	return next();
 }
 app.get('/api/logout', function(req, res) {
 	req.logout();
 	res.status(200).end();
 	// res.redirect('/auth');
 })
-// app.get('/api/profile', isAuthed, userCtrl.profile);
+app.get('/api/profile', isAuthed, profileCtrl.profile);
 app.get('/api/user', userCtrl.get);
 
 

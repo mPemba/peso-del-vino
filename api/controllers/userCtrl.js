@@ -17,5 +17,8 @@ module.exports = {
 			console.log(userOnline);
 			res.status(200).json(userOnline);
 		})
-	}
+	},
+	// currentUser: function(req, res) {
+	// 	return res.status(200).json(req.user);
+	// }
 }

@@ -166,6 +166,8 @@ html, body {
 	font-family: sans-serif;
 }
 .auth-form-input {
+	font-size: 1rem;
+	font-weight: lighter;
 	margin: 0 auto;
 	margin-bottom: 10px;
 	width: 200px;
