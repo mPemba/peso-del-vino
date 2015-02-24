@@ -133,12 +133,6 @@ html, body {
 }
 .wine-pic-frame {
 	list-style-type: none;
-/*	display: flex;
-	height: 175px;
-	width: 175px;
-	border-radius: 100%;
-	border: 1px dotted green;
-	margin: 0 auto;*/
 }
 .wine-details {
 	font-size: 1.25rem;

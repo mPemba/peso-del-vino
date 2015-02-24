@@ -1,0 +1,170 @@
+html, body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  height: 2000px;
+  width: 100%;
+  background: #fff5e5; }
+
+.main-headline-container {
+  background-image: url("/images/grapesOne.jpg");
+  background-position: center;
+  height: 400px;
+  width: 100%;
+  text-align: center; }
+
+.main-headline {
+  font-family: sans-serif;
+  margin: 0 auto;
+  color: #fff;
+  padding-top: 150px;
+  letter-spacing: 10px;
+  font-weight: lighter;
+  font-size: 6rem; }
+
+.main-sub-headline {
+  color: #5a3e30;
+  font-family: 'Didot';
+  letter-spacing: 1.5px;
+  font-weight: lighter; }
+
+.sub-headline-container {
+  color: #5a3e30;
+  font-family: sans-serif;
+  text-align: center; }
+
+.btn {
+  color: #5a3e30;
+  font-family: sans-serif;
+  font-size: 1rem;
+  font-weight: lighter;
+  height: 35px;
+  width: 175px;
+  border: 2px solid #5a3e30;
+  background: none;
+  margin: 0px 5px 0px 5px; }
+
+.btn:hover {
+  color: #fff5e5;
+  background: #5b1f24;
+  font-weight: lighter; }
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: center; }
+
+.navbar-link {
+  color: #5a3e30;
+  height: 16px;
+  border-left: 1px solid #5a3e30;
+  border-right: 1px solid #5a3e30;
+  margin: 0px 10px 0px 10px;
+  list-style-type: none; }
+
+.logout-btn {
+  background: none;
+  border: none;
+  font-size: 1rem;
+  font-family: sans-serif; }
+
+.logout-btn:hover {
+  font-weight: lighter; }
+
+.header-link {
+  color: #5a3e30;
+  list-style-type: none;
+  text-align: center;
+  margin-right: 35px;
+  text-decoration: none;
+  letter-spacing: 2px; }
+
+.link {
+  color: #5a3e30;
+  padding-left: 8px;
+  padding-right: 8px;
+  color: black;
+  font-family: sans-serif;
+  text-decoration: none;
+  letter-spacing: 2px; }
+
+.link:hover {
+  font-weight: lighter; }
+
+.food-headline {
+  color: #5a3e30;
+  text-align: center;
+  font-family: "Great Vibes", cursive;
+  letter-spacing: 4px;
+  font-weight: lighter;
+  font-size: 2rem; }
+
+.form-control {
+  display: flex;
+  flex-direction: row;
+  justify-content: center; }
+
+.outer-wine-container {
+  margin-top: 0;
+  margin: 0 auto; }
+
+.wine-container {
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center; }
+
+.wine {
+  text-align: center;
+  display: flex;
+  flex-direction: column; }
+
+.wine-pic {
+  list-style-type: none;
+  margin: 0 auto;
+  height: 150px;
+  width: 150px;
+  border: 2px solid #5a3e30;
+  border-radius: 100%; }
+
+.wine-pic-frame {
+  list-style-type: none; }
+
+.wine-details {
+  font-size: 1.25rem;
+  color: #24201e;
+  padding-top: 10px;
+  margin: 0 auto;
+  display: flex;
+  list-style-type: none;
+  font-family: 'Libre Baskerville', serif;
+  letter-spacing: 2px; }
+
+.wine-view {
+  padding: 10px;
+  padding-bottom: 60px; }
+
+.auth-headline {
+  font-size: 2.5rem;
+  font-family: "Great Vibes", cursive; }
+
+.auth-form {
+  display: flex;
+  flex-direction: column; }
+
+.auth-label {
+  font-family: sans-serif; }
+
+.auth-form-input {
+  font-size: 1rem;
+  font-weight: lighter;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  width: 200px;
+  height: 25px;
+  background: none;
+  border: 2px solid #5a3e30;
+  text-align: center; }
+
+/*# sourceMappingURL=main.css.map */

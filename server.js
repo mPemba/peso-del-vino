@@ -70,7 +70,7 @@ app.get('/api/logout', function(req, res) {
 	// res.redirect('/auth');
 })
 app.get('/api/profile', isAuthed, profileCtrl.profile);
-app.get('/api/user', userCtrl.get);
+app.get('/api/user', isAuthed, userCtrl.get);
 
 
 app.listen(port, function() {
