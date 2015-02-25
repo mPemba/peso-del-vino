@@ -2,11 +2,10 @@ var app = angular.module('vino');
 
 app.controller('authCtrl', function($scope, $location, authService) {
 	$scope.state = 'login';
+
 	$scope.clickLogin = function() {
 		authService.login($scope.email, $scope.password).then(function() {
 			$location.path('/home');
-			$scope.email = '';
-			$scope.password = '';
 		}).catch(function(err) {
 			$scope.loginError = true;
 		})
@@ -15,8 +14,6 @@ app.controller('authCtrl', function($scope, $location, authService) {
 		authService.register($scope.email, $scope.password).then(function() {
 			$scope.state = 'login';
 			$scope.registerSuccessful = true;
-			$scope.email = '';
-			$scope.password = '';
 		}).catch(function(err) {
 			$scope.regError = true;
 		})
@@ -27,3 +24,18 @@ app.controller('authCtrl', function($scope, $location, authService) {
 		$scope.state = newState;
 	}
 })
+
+
+	// $scope.credentials = {
+	// 	email: '',
+	// 	password: ''
+	// };
+
+	// $scope.login = function(credentials) {
+	// 	authService.login(credentials).then(function(user) {
+	// 		$rootScope.$broadcast(AUTH_EVENTS.loginSuccess);
+	// 		$scope.setCurrentUser(user);
+	// 	}, function() {
+	// 		$rootScope.$broadcast(AUTH_EVENTS.loginFailed);
+	// 	})
+	// }

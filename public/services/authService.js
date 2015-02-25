@@ -17,7 +17,7 @@ app.service('authService', function($http, $q) {
 			dfd.resolve(response.data);
 		})
 		.catch(function(err) {
-			console.log('error in the registration service');
+			console.log('error: authservice');
 			dfd.reject(err);
 		})
 		return dfd.promise;
@@ -46,39 +46,46 @@ app.service('authService', function($http, $q) {
 			}
 		}).then(function(response) {
 			dfd.resolve(response.data);
-			Session.create(res.data.id, res.data.user.id, res.data.user.role);
 		}).catch(function(err) {
 			console.log("error logging in");
 			dfd.reject(err);
 		})
 		return dfd.promise;
-		return res.data.user;
 	}
 
-	this.isAuthenticated = function() {
-		return !!Session.userId;
-	}
+	// this.login = function(credentials) {
+	// 	return $http
+	// 	.post('/login', credentials)
+	// 	.then(function(res) {
+	// 		Session.create(res.data.id, res.data.user.id, res.data.user.role);
+	// 		return res.data.user;
+	// 	})
+	// }
 
-	this.isAuthorized = function(authorizedRoles) {
-		if (!angular.isArray(authorizedRoles)) {
-			authorizedRoles = [authorizedRoles];
-		}
-		return (this.isAuthenticated() && authorizedRoles.indexOf(Session.userRole) !== -1);
-	};
-	return authService;
+	// this.isAuthenticated = function() {
+	// 	return !!Session.userId;
+	// }
 
-    this.create = function(sessionId, userId, userRole) {
-    	this.id = sessionId;
-    	this.userId = userId;
-    	this.userRole = userRole;
-    }
+	// this.isAuthorized = function(authorizedRoles) {
+	// 	if (!angular.isArray(authorizedRoles)) {
+	// 		authorizedRoles = [authorizedRoles];
+	// 	}
+	// 	return (this.isAuthenticated() && authorizedRoles.indexOf(Session.userRole) !== -1);
+	// };
+	// return authService;
 
-    this.destroy = function() {
-    	this.id = null;
-    	this.userId = null;
-    	this.userRole = null;
-    }
-    return this;
+ //    this.create = function(sessionId, userId, userRole) {
+ //    	this.id = sessionId;
+ //    	this.userId = userId;
+ //    	this.userRole = userRole;
+ //    }
+
+ //    this.destroy = function() {
+ //    	this.id = null;
+ //    	this.userId = null;
+ //    	this.userRole = null;
+ //    }
+ //    return this;
 
 
 })
