@@ -5,6 +5,8 @@ app.controller('authCtrl', function($scope, $location, authService) {
 	$scope.clickLogin = function() {
 		authService.login($scope.email, $scope.password).then(function() {
 			$location.path('/home');
+			$scope.email = '';
+			$scope.password = '';
 		}).catch(function(err) {
 			$scope.loginError = true;
 		})
@@ -13,6 +15,8 @@ app.controller('authCtrl', function($scope, $location, authService) {
 		authService.register($scope.email, $scope.password).then(function() {
 			$scope.state = 'login';
 			$scope.registerSuccessful = true;
+			$scope.email = '';
+			$scope.password = '';
 		}).catch(function(err) {
 			$scope.regError = true;
 		})

@@ -54,4 +54,15 @@ app.config(function($routeProvider) {
 		redirectTo: '/auth'
 	})
 })
-
+.run(function($rootScope, AUTH_EVENTS, authService) {
+	$rootScope.on('$stateChangeStart', function(event, next) {
+		var authorizedRoles = next.data.authorizedRoles;
+		if (!authService.isAuthorized(authorizedRoles)) {
+			event.preventDefault();
+			//user not allowed
+			$rootScope.$broadcast(AUTH_EVENTS.notAuthorized);
+		} else {
+			$rootScope.$broadcast(AUTH_EVENTS.notAuthenticated);
+		}
+	})
+})
