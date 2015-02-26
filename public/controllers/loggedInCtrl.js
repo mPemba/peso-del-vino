@@ -1,6 +1,40 @@
 var app = angular.module('vino');
 
-app.controller('loggedInCtrl', function($scope, $location, loggedInService) {
+app.controller('loggedInCtrl', function($scope, $rootScope, $location, loggedInService, authService) {
+
+
+	var getUser = function() {
+		$scope.user = authService.getUser();
+	}
+	getUser();
+    
+    $scope.$on('updateUser', function() {
+    	console.log('reading broadcast');
+    	getUser();
+    })
+
+
+	$scope.logout = function() {
+		authService.logMeOut().then(function() {
+			$location.path('/auth')
+		})
+		.catch(function(err) {
+			console.log('error in the logged in ctrl', err);
+		})
+	}
+
+
+})
+
+
+
+
+
+
+
+
+
+
 	// $scope.profile = app;
 
 	//define, and initialize current user on scope
@@ -11,13 +45,3 @@ app.controller('loggedInCtrl', function($scope, $location, loggedInService) {
 	// $scope.setCurrentUser = function(user) {
 	// 	$scope.currentUser = user;
 	// }
-
-	$scope.logout = function() {
-		loggedInService.logMeOut().then(function() {
-			$location.path('/auth')
-		})
-		.catch(function(err) {
-			console.log('error in the logged in ctrl', err);
-		})
-	}
-})

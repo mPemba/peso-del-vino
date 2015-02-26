@@ -13,19 +13,19 @@
     <h1 class="main-headline">PESO DEL VINO</h1>
   </div>
 
-  <ul class="navbar">
+  <ul class="navbar" ng-show="user">
     <li id="homepage-link" class="header-link"> <a class="link" href="/#/home">Home</a> </li>
 <!--   <li class="header-link"> <a class="link" href="/#/profile">Profile</a> </li> -->
     <li class="header-link"> <button class="logout-btn" ng-click="logout()">Log Out</button> </li>
   </ul>
 
-<hr>
+<hr ng-show="user">
 
   <div class="sub-headline-container">
     <p class="main-sub-headline">Match the weight of the wine, to your entrée:</p><br>
   </div>
 
-<div class="navbar" ng-hide="false">
+<div class="navbar animate-show" ng-show="user">
   <ul class="navbar">
     <li class="navbar-link"> <a class="link" href="/#/beef">Beef</a> </li>
     <li class="navbar-link"> <a class="link" href="/#/pork">Pork</a> </li>

@@ -3,6 +3,12 @@ var app = angular.module('vino');
 app.controller('authCtrl', function($scope, $location, authService) {
 	$scope.state = 'login';
 
+	var updateUser = function() {
+		authService.getProfile().then(function(data) {
+			$scope.user = data;
+		})
+	}
+
 	$scope.clickLogin = function() {
 		authService.login($scope.email, $scope.password).then(function() {
 			$location.path('/home');
@@ -23,6 +29,7 @@ app.controller('authCtrl', function($scope, $location, authService) {
 		$scope.regError = false;
 		$scope.state = newState;
 	}
+
 })
 
 

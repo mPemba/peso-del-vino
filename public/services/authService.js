@@ -1,6 +1,8 @@
 var app = angular.module('vino');
 
-app.service('authService', function($http, $q) {
+app.service('authService', function($http, $q, $rootScope) {
+
+	var user = "";
 
 	this.register = function(email, password) {
 		var dfd = $q.defer();
@@ -22,18 +24,21 @@ app.service('authService', function($http, $q) {
 		})
 		return dfd.promise;
 	}
-	this.getProfile = function() {
+	var getProfile = function() {
 		var dfd = $q.defer();
 		console.log('almost resolved');
 		$http({
 			method: 'GET',
-			url: '/api/profile'
+			url: '/api/me'
 		}).then(function(response) {
+			user = response.data;
+			$rootScope.$broadcast("updateUser")
 			console.log('profile promise resolved');
 			dfd.resolve(response.data);
 		})
 		return dfd.promise;
 	}
+	this.user;
 
 	this.login = function(email, password) {
 		var dfd = $q.defer();
@@ -45,12 +50,29 @@ app.service('authService', function($http, $q) {
 				password: password
 			}
 		}).then(function(response) {
+			getProfile();
 			dfd.resolve(response.data);
 		}).catch(function(err) {
 			console.log("error logging in");
 			dfd.reject(err);
 		})
 		return dfd.promise;
+	}
+
+	this.logMeOut = function() {
+		var dfd = $q.defer();
+		$http({
+			method: 'GET',
+			url: '/api/logout'
+		}).then(function(response) {
+			getProfile();
+			dfd.resolve(response.data);
+		})
+		return dfd.promise;
+	}
+
+	this.getUser = function() {
+		return user;
 	}
 
 	// this.login = function(credentials) {

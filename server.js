@@ -80,6 +80,10 @@ var isAuthed = function(req, res, next) {
 	return next();
 }
 
+app.get('/api/me', function(req, res) {
+	return res.json(req.user);
+})
+
 app.get('/api/logout', function(req, res) {
 	req.logout();
 	res.status(200).end();
@@ -92,3 +96,4 @@ app.get('/api/user', isAuthed, userCtrl.get);
 app.listen(port, function() {
 	console.log('listening on port ' + port);
 })
+
