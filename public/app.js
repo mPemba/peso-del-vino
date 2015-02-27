@@ -19,50 +19,110 @@ app.config(function($routeProvider) {
 	.when('/auth', {
 		templateUrl: '/tmpls/auth.html',
 		controller: 'authCtrl'
+		// resolve: {
+		// 	user: function(authService){
+		// 		return authService.getUser;
+		// 	}
+		// }
 	})
 	.when('/home', {
 		templateUrl: '/tmpls/home.html',
-		controller: 'loggedInCtrl'
+		controller: 'loggedInCtrl',
+		resolve: {
+			user: function(authService) {
+				return authService.getUser;
+			}
+		}
 	})
 	.when('/beef', {
 		templateUrl: 'tmpls/beef.html',
-		controller: 'beefCtrl'
+		controller: 'beefCtrl',
+		resolve: {
+			user: function(authService) {
+				return authService.getUser;
+			}
+		}
 	})
 	.when('/pork', {
 		templateUrl: 'tmpls/pork.html',
-		controller: 'porkCtrl'
+		controller: 'porkCtrl',
+		resolve: {
+			user: function(authService) {
+				return authService.getUser;
+			}
+		}
 	})
 	.when('/lamb', {
 		templateUrl: 'tmpls/lamb.html',
-		controller: 'lambCtrl'
+		controller: 'lambCtrl',
+		resolve: {
+			user: function(authService) {
+				return authService.getUser;
+			}
+		}
 	})
 	.when('/poultry', {
 		templateUrl: 'tmpls/poultry.html',
-		controller: 'poultryCtrl'
+		controller: 'poultryCtrl',
+		resolve: {
+			user: function(authService) {
+				return authService.getUser;
+			}
+		}
 	})
 	.when('/fish', {
 		templateUrl: 'tmpls/fish.html',
-		controller: 'fishCtrl'
+		controller: 'fishCtrl',
+		resolve: {
+			user: function(authService) {
+				return authService.getUser;
+			}
+		}
 	})
 	.when('/crustaceans', {
 		templateUrl: 'tmpls/crustaceans.html',
-		controller: 'crustCtrl'
+		controller: 'crustCtrl',
+		resolve: {
+			user: function(authService) {
+				return authService.getUser;
+			}
+		}
 	})
 	.when('/pasta', {
 		templateUrl: 'tmpls/pasta.html',
-		controller: 'pastaCtrl'
+		controller: 'pastaCtrl',
+		resolve: {
+			user: function(authService) {
+				return authService.getUser;
+			}
+		}
 	})
 	.when('/veggies', {
 		templateUrl: 'tmpls/veggies.html',
-		controller: 'veggiesCtrl'
+		controller: 'veggiesCtrl',
+		resolve: {
+			user: function(authService) {
+				return authService.getUser;
+			}
+		}
 	})
 	.when('/cheese', {
 		templateUrl: 'tmpls/cheese.html',
-		controller: 'cheeseCtrl'
+		controller: 'cheeseCtrl',
+		resolve: {
+			user: function(authService) {
+				return authService.getUser;
+			}
+		}
 	})
 	.when('/dessert', {
 		templateUrl: 'tmpls/dessert.html',
-		controller: 'dessertCtrl'
+		controller: 'dessertCtrl',
+		resolve: {
+			user: function(authService) {
+				return authService.getUser;
+			}
+		}
 	})
 	.otherwise({
 		redirectTo: '/auth'

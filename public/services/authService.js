@@ -2,7 +2,7 @@ var app = angular.module('vino');
 
 app.service('authService', function($http, $q, $rootScope) {
 
-	var user = "";
+	var user;
 
 	this.register = function(email, password) {
 		var dfd = $q.defer();
@@ -72,7 +72,19 @@ app.service('authService', function($http, $q, $rootScope) {
 	}
 
 	this.getUser = function() {
-		return user;
+		var dfd = $q.defer();
+		if(user){
+			dfd.resolve(user); 
+		} else {
+			$http.get('/api/me')
+			.then(function(data){
+				user = data.data
+				dfd.resolve(user)
+			}, function(){
+				$location.path('/auth');
+			})
+		}
+		return dfd.promise;
 	}
 
 	// this.login = function(credentials) {
