@@ -81,7 +81,11 @@ var isAuthed = function(req, res, next) {
 }
 
 app.get('/api/me', function(req, res) {
-	return res.json(req.user);
+	if(req.user){
+		return res.json(req.user);
+	} else {
+		res.status(404).end();
+	}
 })
 
 app.get('/api/logout', function(req, res) {
