@@ -1,15 +1,19 @@
 var app = angular.module('vino');
 
-app.controller('authCtrl', function($scope, $location, authService) {
+app.controller('authCtrl', function($scope, $rootScope, $location, authService) {
 	$scope.state = 'login';
 
+	// $rootScope.user = user;
+	// console.log($rootScope.user)
+
 	var updateUser = function() {
-		authService.getProfile().then(function(data) {
-			$scope.user = data;
+		authService.getUser().then(function(data) {
+			$rootScope.user = data;
 		})
 	}
 	$scope.clickLogin = function() {
 		authService.login($scope.email, $scope.password).then(function() {
+			updateUser();
 			$location.path('/home');
 		}).catch(function(err) {
 			$scope.loginError = true;
@@ -17,6 +21,7 @@ app.controller('authCtrl', function($scope, $location, authService) {
 	}
 	$scope.clickRegister = function() {
 		authService.register($scope.email, $scope.password).then(function() {
+			updateUser();
 			$scope.state = 'login';
 			$scope.registerSuccessful = true;
 		}).catch(function(err) {

@@ -4,18 +4,28 @@ app.controller('loggedInCtrl', function($scope, $rootScope, $location, loggedInS
 
 
 	var getUser = function() {
-		$scope.user = authService.getUser();
+		authService.getUser().then(function(res){
+			console.log(res)
+			$rootScope.user = res;
+		}, function(err) {
+			console.log(err)
+			// $rootScope.user = false;
+		});
+		// console.log($rootScope.user);
 	}
 	getUser();
     
-    $scope.$on('updateUser', function() {
-    	console.log('reading broadcast');
-    	getUser();
-    })
+ //    $scope.$on('updateUser', function() {
+ //    	console.log('reading broadcast');
+ //    	getUser();
+ //    })
 
 
 	$scope.logout = function() {
-		authService.logMeOut().then(function() {
+		authService.logMeOut().then(function(res) {
+			getUser();
+			// console.log(res)
+			$rootScope.user = false;
 			$location.path('/auth')
 		})
 		.catch(function(err) {

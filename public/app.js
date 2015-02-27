@@ -21,7 +21,7 @@ app.config(function($routeProvider) {
 		controller: 'authCtrl'
 		// resolve: {
 		// 	user: function(authService){
-		// 		return authService.getUser;
+		// 		return authService.getUser();
 		// 	}
 		// }
 	})

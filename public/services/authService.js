@@ -1,8 +1,8 @@
 var app = angular.module('vino');
 
-app.service('authService', function($http, $q, $rootScope) {
+app.service('authService', function($http, $q, $rootScope, $location) {
 
-	var user;
+	// var user;
 
 	this.register = function(email, password) {
 		var dfd = $q.defer();
@@ -24,21 +24,21 @@ app.service('authService', function($http, $q, $rootScope) {
 		})
 		return dfd.promise;
 	}
-	var getProfile = function() {
-		var dfd = $q.defer();
-		console.log('almost resolved');
-		$http({
-			method: 'GET',
-			url: '/api/me'
-		}).then(function(response) {
-			user = response.data;
-			$rootScope.$broadcast("updateUser")
-			console.log('profile promise resolved');
-			dfd.resolve(response.data);
-		})
-		return dfd.promise;
-	}
-	this.user;
+	// var getProfile = function() {
+	// 	var dfd = $q.defer();
+	// 	console.log('almost resolved');
+	// 	$http({
+	// 		method: 'GET',
+	// 		url: '/api/me'
+	// 	}).then(function(response) {
+	// 		user = response.data;
+	// 		$rootScope.$broadcast("updateUser")
+	// 		console.log('profile promise resolved');
+	// 		dfd.resolve(response.data);
+	// 	})
+	// 	return dfd.promise;
+	// }
+	// this.user;
 
 	this.login = function(email, password) {
 		var dfd = $q.defer();
@@ -50,7 +50,7 @@ app.service('authService', function($http, $q, $rootScope) {
 				password: password
 			}
 		}).then(function(response) {
-			getProfile();
+			// getProfile();
 			dfd.resolve(response.data);
 		}).catch(function(err) {
 			console.log("error logging in");
@@ -65,7 +65,7 @@ app.service('authService', function($http, $q, $rootScope) {
 			method: 'GET',
 			url: '/api/logout'
 		}).then(function(response) {
-			getProfile();
+			// getProfile();
 			dfd.resolve(response.data);
 		})
 		return dfd.promise;
@@ -73,17 +73,20 @@ app.service('authService', function($http, $q, $rootScope) {
 
 	this.getUser = function() {
 		var dfd = $q.defer();
-		if(user){
-			dfd.resolve(user); 
-		} else {
-			$http.get('/api/me')
-			.then(function(data){
-				user = data.data
-				dfd.resolve(user)
-			}, function(){
-				$location.path('/auth');
-			})
-		}
+		// console.log(user);
+		// if(user){
+		// 	dfd.resolve(user); 
+		// } else {
+		$http.get('/api/me')
+		.then(function(data){
+			user = data.data
+			// console.log(user)
+			dfd.resolve(user)
+		}, function(err){
+			// console.log(err)
+			$location.path('/auth');
+		})
+		// }
 		return dfd.promise;
 	}
 
