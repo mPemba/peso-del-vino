@@ -5,7 +5,7 @@ var localStrategy = require('passport-local').Strategy;
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 
-var port = 8666;
+var port = 80;
 var app = express();
 
 app.use(express.static(__dirname + '/public'));
