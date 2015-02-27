@@ -1,6 +1,7 @@
 @import 'helpers/all';
 
 html, body {
+	text-rendering: optimizeLegibility;
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
@@ -158,6 +159,7 @@ html, body {
 	padding-bottom: 60px;
 }
 .auth-headline {
+	text-rendering: optimizeLegibility;
 	color: $lightBrown;
 	font-size: 2.5rem;
 	font-family: $great-vibes;
@@ -265,6 +267,9 @@ html, body {
 	letter-spacing: 2px;
 	font-family: sans-serif;
 	font-size: 1.3rem;
+}
+.wine-weight-em {
+	color: $complementaryBlue;
 }
 .footer {
 	width: 100%;
