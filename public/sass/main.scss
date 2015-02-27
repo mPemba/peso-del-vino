@@ -37,7 +37,7 @@ html, body {
 }
 .btn {
 	color: $lightBrown;
-	font-family: sans-serif;
+	font-family: $main-course;
 	font-size: 1rem;
 	font-weight: lighter;
 	height: 35px;
@@ -68,7 +68,8 @@ html, body {
 	background: none;
 	border: none;
 	font-size: 1rem;
-	font-family: sans-serif;
+	font-family: $home-logout;
+	letter-spacing: 3px;
 }
 .logout-btn:hover {
 	font-weight: lighter;
@@ -79,16 +80,25 @@ html, body {
 	text-align: center;
 	margin-right: 35px;
 	text-decoration: none;
-	letter-spacing: 2px;
+/*	letter-spacing: 2px;*/
+}
+.main-course-link {
+	color: $lightBrown;
+	padding-left: 8px;
+	padding-right: 8px;
+	color: black;
+	font-family: $main-course;
+	text-decoration: none;
+	letter-spacing: 3px;
 }
 .link {
 	color: $lightBrown;
 	padding-left: 8px;
 	padding-right: 8px;
 	color: black;
-	font-family: sans-serif;
+	font-family: $home-logout;
 	text-decoration: none;
-	letter-spacing: 2px;
+	letter-spacing: 3px;
 }
 .link:hover {
 	font-weight: lighter;
@@ -140,7 +150,7 @@ html, body {
 	margin: 0 auto;
 	display: flex;
 	list-style-type: none;
-    font-family:'Libre Baskerville', serif;
+    font-family: $wine-detail;
     letter-spacing: 2px;
 }
 .wine-view {
@@ -158,11 +168,12 @@ html, body {
 }
 .auth-label {
 	color: $lightBrown;
-	font-family: sans-serif;
+	font-family: $main-course;
 }
 .auth-form-input {
 	font-size: 1rem;
 	font-weight: lighter;
+	font-family: $home-logout; 
 	margin: 0 auto;
 	margin-bottom: 10px;
 	width: 200px;
@@ -172,7 +183,7 @@ html, body {
 	text-align: center;
 }
 .auth-input-btn {
-	font-family: sans-serif;
+	font-family: $main-course;
 	font-size: 1rem;
 	margin: 0 auto;
 	margin-bottom: 10px;
@@ -294,10 +305,6 @@ html, body {
 	color: hsl(145, 74%, 47%);
 }
 /*        EXPERIMENTS         */
-
-
-
-
 
 
 

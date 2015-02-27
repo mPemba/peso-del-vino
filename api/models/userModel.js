@@ -6,9 +6,6 @@ var q = require('q');
 var schema = new Schema({
 	email: {type: String, unique: true},
 	password: String
-	// gender: String,
-	// age: Number,
-	// bio: String
 })
 
 schema.pre('save', function(next) {

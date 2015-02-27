@@ -1,26 +1,26 @@
 <div class="outer-wine-contatiner">
 
-<h1 class="food-headline">Pasta Pairing</h1>
+<h1 class="food-headline animated fadeIn">Pasta Pairing</h1>
 
   <div class="form-control">
     <form>
-        <button class="btn" ng-click="getLasagne()">Lasagne</button>
+        <button class="btn animated fadeIn" ng-click="getLasagne()">Lasagne</button>
     </form>
     <form>
-        <button class="btn" ng-click="getWhitePasta()">Cream Sauce</button>
+        <button class="btn animated fadeIn" ng-click="getWhitePasta()">Cream Sauce</button>
     </form>
     <form>
-        <button class="btn" ng-click="getTomatoPasta()">Tomato Sauce</button>
+        <button class="btn animated fadeIn" ng-click="getTomatoPasta()">Tomato Sauce</button>
     </form>
     <form>
-        <button class="btn" ng-click="getFishPasta()">Pasta with Fish</button>
+        <button class="btn animated fadeIn" ng-click="getFishPasta()">Pasta with Fish</button>
     </form>
   </div>
 
 
     <div class="wine-container" ng-repeat="key in wineData">
       <div class="wine-container"> 
-          <ul class="wine">
+          <ul class="wine animated fadeInUpBig">
             <li class="wine-pic-frame"><img class="wine-pic" ng-src="{{key.image}}"></li>
             <li class="wine-details">{{key.name}}</li>
             <li class="wine-details">${{key.price}}</li>

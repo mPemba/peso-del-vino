@@ -1,29 +1,29 @@
 <div class="outer-wine-contatiner">
 
-  <h1 class="food-headline">Fish Pairing</h1>
+  <h1 class="food-headline animated fadeIn">Fish Pairing</h1>
 
   <div class="form-control">
     <form>
-        <button class="btn" ng-click="getRichFish()">Rich Sauce</button>
+        <button class="btn animated fadeIn" ng-click="getRichFish()">Rich Sauce</button>
     </form>
     <form>
-        <button class="btn" ng-click="getLemonFish()">Lemon</button>
+        <button class="btn animated fadeIn" ng-click="getLemonFish()">Lemon</button>
     </form>
     <form>
-        <button class="btn" ng-click="getGrilledSalm()">Grilled Salmon</button>
+        <button class="btn animated fadeIn" ng-click="getGrilledSalm()">Grilled Salmon</button>
     </form>
     <form>
-        <button class="btn" ng-click="getBlackSalm()">Blackened Salmon</button>
+        <button class="btn animated fadeIn" ng-click="getBlackSalm()">Blackened Salmon</button>
     </form>
       <form>
-        <button class="btn" ng-click="getRichSalm()">Salmon w/ Rich Sauce</button>
+        <button class="btn animated fadeIn" ng-click="getRichSalm()">Salmon w/ Rich Sauce</button>
     </form>
   </div>
 
 
     <div class="wine-container" ng-repeat="key in wineData">
       <div class="wine-container"> 
-          <ul class="wine">
+          <ul class="wine animated fadeInUpBig">
             <li class="wine-pic-frame"><img class="wine-pic" ng-src="{{key.image}}"></li>
             <li class="wine-details">{{key.name}}</li>
             <li class="wine-details">${{key.price}}</li>

@@ -1,4 +1,4 @@
-var app = angular.module('vino', ["ngRoute"]);
+var app = angular.module('vino', ["ngRoute", "ngAnimate"]);
 
 // app.constant('AUTH_EVENTS', {
 // 	loginSuccess: 'auth-login-success',
