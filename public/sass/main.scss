@@ -28,6 +28,8 @@ html, body {
 .main-sub-headline {
 	color: $lightBrown;
 	font-family: 'Didot';
+	font-variant: small-caps;
+	font-size: 1.2rem;
 	letter-spacing: 1.5px;
 	font-weight: lighter;
 }
@@ -38,11 +40,11 @@ html, body {
 }
 .btn {
 	color: $lightBrown;
-	font-family: $main-course;
-	font-size: 1rem;
+	font-family: $button-font;
+	font-size: 1.2rem;
 	font-weight: lighter;
-	height: 35px;
-	width: 175px;
+	height: 50px;
+	width: 200px;
 	border: $lightBrown-border;
 	background: none;
 	margin: 0px 5px 0px 5px;
@@ -73,7 +75,7 @@ html, body {
 	letter-spacing: 3px;
 }
 .logout-btn:hover {
-	font-weight: lighter;
+	color: $complementaryBlue;
 }
 .header-link {
 	color: $lightBrown;
@@ -89,8 +91,12 @@ html, body {
 	padding-right: 8px;
 	color: black;
 	font-family: $main-course;
+	font-size: 1.2rem;
 	text-decoration: none;
 	letter-spacing: 3px;
+}
+.main-course-link:hover {
+	color: $complementaryBlue;
 }
 .link {
 	color: $lightBrown;
@@ -102,7 +108,7 @@ html, body {
 	letter-spacing: 3px;
 }
 .link:hover {
-	font-weight: lighter;
+	color: $complementaryBlue;
 }
 .food-headline {
 	color: $lightBrown;
@@ -145,7 +151,7 @@ html, body {
 	list-style-type: none;
 }
 .wine-details {
-	font-size: 1.25rem;
+	font-size: 1.3rem;
 	color: $near-black;
 	padding-top: 10px;
 	margin: 0 auto;
@@ -161,7 +167,7 @@ html, body {
 .auth-headline {
 	text-rendering: optimizeLegibility;
 	color: $lightBrown;
-	font-size: 2.5rem;
+	font-size: 2.7rem;
 	font-family: $great-vibes;
 }
 .auth-form {
@@ -170,34 +176,34 @@ html, body {
 }
 .auth-label {
 	color: $lightBrown;
-	font-family: $main-course;
+	font-family: $button-font;
 }
 .auth-form-input {
-	font-size: 1rem;
+	font-size: 1.2rem;
 	font-weight: lighter;
 	font-family: $home-logout; 
 	margin: 0 auto;
 	margin-bottom: 10px;
-	width: 200px;
-	height: 25px;
+	width: 220px;
+	height: 30px;
 	background: none;
 	border: $lightBrown-border;
 	text-align: center;
 }
 .auth-input-btn {
-	font-family: $main-course;
-	font-size: 1rem;
+	font-family: $button-font;
+	font-size: 1.2rem;
 	margin: 0 auto;
 	margin-bottom: 10px;
-	width: 208px;
-	height: 28px;
+	width: 228px;
+	height: 32px;
 	background: none;
 	color: $lightBrown;
 	border: $lightBrown-border;
 }
 .login-error {
 	padding-top: 10px;
-	font-size: 1rem;
+	font-size: 1.1rem;
 	font-family: sans-serif;
 	color: $color-of-error;
 }

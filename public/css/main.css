@@ -26,6 +26,8 @@ html, body {
 .main-sub-headline {
   color: #5a3e30;
   font-family: 'Didot';
+  font-variant: small-caps;
+  font-size: 1.2rem;
   letter-spacing: 1.5px;
   font-weight: lighter; }
 
@@ -36,11 +38,11 @@ html, body {
 
 .btn {
   color: #5a3e30;
-  font-family: "Roboto", sans-serif;
-  font-size: 1rem;
+  font-family: "Lato", sans-serif;
+  font-size: 1.2rem;
   font-weight: lighter;
-  height: 35px;
-  width: 175px;
+  height: 50px;
+  width: 200px;
   border: 2px solid #5a3e30;
   background: none;
   margin: 0px 5px 0px 5px; }
@@ -71,7 +73,7 @@ html, body {
   letter-spacing: 3px; }
 
 .logout-btn:hover {
-  font-weight: lighter; }
+  color: #305a57; }
 
 .header-link {
   color: #5a3e30;
@@ -86,9 +88,13 @@ html, body {
   padding-left: 8px;
   padding-right: 8px;
   color: black;
-  font-family: "Roboto", sans-serif;
+  font-family: "Lato", sans-serif;
+  font-size: 1.2rem;
   text-decoration: none;
   letter-spacing: 3px; }
+
+.main-course-link:hover {
+  color: #305a57; }
 
 .link {
   color: #5a3e30;
@@ -100,7 +106,7 @@ html, body {
   letter-spacing: 3px; }
 
 .link:hover {
-  font-weight: lighter; }
+  color: #305a57; }
 
 .food-headline {
   color: #5a3e30;
@@ -143,7 +149,7 @@ html, body {
   list-style-type: none; }
 
 .wine-details {
-  font-size: 1.25rem;
+  font-size: 1.3rem;
   color: #24201e;
   padding-top: 10px;
   margin: 0 auto;
@@ -159,7 +165,7 @@ html, body {
 .auth-headline {
   text-rendering: optimizeLegibility;
   color: #5a3e30;
-  font-size: 2.5rem;
+  font-size: 2.7rem;
   font-family: "Great Vibes", cursive; }
 
 .auth-form {
@@ -168,34 +174,34 @@ html, body {
 
 .auth-label {
   color: #5a3e30;
-  font-family: "Roboto", sans-serif; }
+  font-family: "Lato", sans-serif; }
 
 .auth-form-input {
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-weight: lighter;
   font-family: "Adamina", serif;
   margin: 0 auto;
   margin-bottom: 10px;
-  width: 200px;
-  height: 25px;
+  width: 220px;
+  height: 30px;
   background: none;
   border: 2px solid #5a3e30;
   text-align: center; }
 
 .auth-input-btn {
-  font-family: "Roboto", sans-serif;
-  font-size: 1rem;
+  font-family: "Lato", sans-serif;
+  font-size: 1.2rem;
   margin: 0 auto;
   margin-bottom: 10px;
-  width: 208px;
-  height: 28px;
+  width: 228px;
+  height: 32px;
   background: none;
   color: #5a3e30;
   border: 2px solid #5a3e30; }
 
 .login-error {
   padding-top: 10px;
-  font-size: 1rem;
+  font-size: 1.1rem;
   font-family: sans-serif;
   color: #991a2d; }
 
