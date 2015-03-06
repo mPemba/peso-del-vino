@@ -317,7 +317,21 @@ html, body {
 }
 /*        EXPERIMENTS         */
 
-
-
+@media (max-width: 600px) {
+	.html, body {
+		width: 600px;
+		height: 100%;
+	}
+	.main-headline-container {
+		width: 400px;
+		display: flex;
+		justify-content: center;
+	}
+}
+@media (max-width: 375px) {
+	.main-headline-container {
+		width: 375px;
+	}
+}
 
 
