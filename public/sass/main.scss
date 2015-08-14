@@ -7,51 +7,49 @@ html, body {
 	padding: 0;
 	height: 2000px;
 	width: 100%;
-	background: $light-background;
+	background: $white;
 }
 .main-headline-container {
 	background-image: url('/images/grapesOne.jpg');
 	background-position: center;
-	height: 400px;
+	height: 666px;
 	width: 100%;
 	text-align: center;
 }
 .main-headline {
-	font-family: sans-serif;
+	font-family: $sansHeadline;
 	margin: 0 auto;
 	color: $white;
-	padding-top: 150px;
+	padding-top: 250px;
 	letter-spacing: 10px;
-	font-weight: lighter;
+	font-weight: 300;
 	font-size: 6rem;
 }
 .main-sub-headline {
-	color: $lightBrown;
-	font-family: 'Didot';
-	font-variant: small-caps;
+	color: $dark;
+	font-family: $serifBody;
 	font-size: 1.2rem;
 	letter-spacing: 1.5px;
-	font-weight: lighter;
 }
 .sub-headline-container {
-	color: $lightBrown;
+	color: $dark;
 	font-family: sans-serif;
 	text-align: center;
 }
 .btn {
-	color: $lightBrown;
-	font-family: $button-font;
+	color: $dark;
+	font-family: $serifBody;
 	font-size: 1.2rem;
 	font-weight: lighter;
 	height: 50px;
 	width: 200px;
-	border: $lightBrown-border;
+	border: $dark-border;
 	background: none;
 	margin: 0px 5px 0px 5px;
 }
 .btn:hover {
-	color: $light-background;
-	background: $dark-red-wine;
+	color: $white;
+	background: $dark;
 	font-weight: lighter;
 }
 .navbar {
@@ -60,25 +58,23 @@ html, body {
 	justify-content: center;
 }
 .navbar-link {
-	color: $lightBrown;
+	color: $dark;
 	height: 16px;
-	border-left: 1px solid $lightBrown;
-	border-right: 1px solid $lightBrown;
 	margin: 0px 10px 0px 10px;
 	list-style-type: none;
 }
 .logout-btn {
 	background: none;
 	border: none;
-	font-size: 1rem;
-	font-family: $home-logout;
-	letter-spacing: 3px;
+	font-size: 1.4rem;
+	color: $dark;
+	font-family: $sansHeadline;
 }
 .logout-btn:hover {
 	color: $complementaryBlue;
 }
 .header-link {
-	color: $lightBrown;
+	color: $dark;
 	list-style-type: none;
 	text-align: center;
 	margin-right: 35px;
@@ -86,11 +82,10 @@ html, body {
 /*	letter-spacing: 2px;*/
 }
 .main-course-link {
-	color: $lightBrown;
+	color: $dark;
 	padding-left: 8px;
 	padding-right: 8px;
-	color: black;
-	font-family: $main-course;
+	font-family: $sansHeadline;
 	font-size: 1.2rem;
 	text-decoration: none;
 	letter-spacing: 3px;
@@ -98,20 +93,21 @@ html, body {
 .main-course-link:hover {
 	color: $complementaryBlue;
 }
+
+// home link
 .link {
-	color: $lightBrown;
+	color: $dark;
 	padding-left: 8px;
 	padding-right: 8px;
-	color: black;
-	font-family: $home-logout;
+	font-size: 1.4rem;
+	font-family: $sansHeadline;
 	text-decoration: none;
-	letter-spacing: 3px;
 }
 .link:hover {
 	color: $complementaryBlue;
 }
 .food-headline {
-	color: $lightBrown;
+	color: $dark;
 	text-align: center;
 	font-family: $great-vibes;
 	letter-spacing: 4px;
@@ -128,6 +124,7 @@ html, body {
 	margin: 0 auto;
 }
 .wine-container {
+	margin-top: 35px;
 	text-align: center;
 	display: flex;
 	flex-direction: row;
@@ -144,7 +141,7 @@ html, body {
 	margin: 0 auto;
 	height: 150px;
 	width: 150px;
-	border: $lightBrown-border;
+	border: $dark-border;
 	border-radius: 100%;
 }
 .wine-pic-frame {
@@ -152,13 +149,13 @@ html, body {
 }
 .wine-details {
 	font-size: 1.3rem;
-	color: $near-black;
+	color: $dark;
 	padding-top: 10px;
 	margin: 0 auto;
 	display: flex;
 	list-style-type: none;
-    font-family: $wine-detail;
-    letter-spacing: 2px;
+  font-family: $sansHeadline;
+  letter-spacing: 2px;
 }
 .wine-view {
 	padding: 10px;
@@ -166,7 +163,7 @@ html, body {
 }
 .auth-headline {
 	text-rendering: optimizeLegibility;
-	color: $lightBrown;
+	color: $dark;
 	font-size: 2.7rem;
 	font-family: $great-vibes;
 }
@@ -175,31 +172,31 @@ html, body {
 	flex-direction: column;
 }
 .auth-label {
-	color: $lightBrown;
-	font-family: $button-font;
+	color: $dark;
+	font-family: $serifBody;
 }
 .auth-form-input {
 	font-size: 1.2rem;
 	font-weight: lighter;
-	font-family: $home-logout; 
+	font-family: $sansHeadline;
 	margin: 0 auto;
 	margin-bottom: 10px;
 	width: 220px;
 	height: 30px;
 	background: none;
-	border: $lightBrown-border;
+	border: $dark-border;
 	text-align: center;
 }
 .auth-input-btn {
-	font-family: $button-font;
+	font-family: $serifBody;
 	font-size: 1.2rem;
 	margin: 0 auto;
 	margin-bottom: 10px;
 	width: 228px;
 	height: 32px;
 	background: none;
-	color: $lightBrown;
-	border: $lightBrown-border;
+	color: $dark;
+	border: $dark-border;
 }
 .login-error {
 	padding-top: 10px;
@@ -209,7 +206,7 @@ html, body {
 }
 .auth-input-btn:hover {
 	background-color: $dark-red-wine;
-	color: $light-background;
+	color: $white;
 }
 #email:hover {
 	background: $dark-red-wine;
@@ -223,11 +220,11 @@ html, body {
 	text-align: center;
 }
 .login-switcher {
-	color: $lightBrown;
+	color: $dark;
 	font-family: sans-serif;
 }
 .login-switcher-link {
-	color: $lightBrown;
+	color: $dark;
 	text-decoration: underline;
 }
 .login-switcher-link:hover {
@@ -239,8 +236,8 @@ html, body {
 .home-headline {
 	margin-top: 0px;
 	padding-top: 150px;
-	color: $lightBrown;
-	font-family: $great-vibes;
+	color: $dark;
+	font-family: $sansHeadline;
 	font-size: 3.5rem;
 }
 .home-photo {
@@ -258,9 +255,10 @@ html, body {
 }
 .home-icon-cuts {
 	padding-top: 19px;
+	padding-left: 4px;
 }
 .home-icon-container {
-	background: $light-background;
+	background: $white;
 	margin: 0 auto;
 	border: 2px solid $complementaryBlue;
 	border-radius: 100%;
@@ -269,13 +267,13 @@ html, body {
 }
 .home-paragraph {
 	line-height: 50px;
-	color: $lightBrown;
+	color: $dark;
 	letter-spacing: 2px;
-	font-family: sans-serif;
+	font-family: $serifBody;
 	font-size: 1.3rem;
 }
 .wine-weight-em {
-	color: $complementaryBlue;
+	color: $dark-red-wine;
 }
 .footer {
 	width: 100%;
@@ -292,7 +290,7 @@ html, body {
 .fa {
 	text-align: center;
 	z-index: 1;
-	color: $light-background;
+	color: $white;
 	margin: 10px 20px 0px 60px;
 	height: 30px;
 	width: 30px;
@@ -333,5 +331,3 @@ html, body {
 		width: 375px;
 	}
 }
-
-
