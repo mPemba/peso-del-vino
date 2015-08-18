@@ -5,58 +5,52 @@ html, body {
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
-	height: 2000px;
 	width: 100%;
 	background: $white;
 }
 
 .btn {
-	color: $dark;
-	font-family: $serifBody;
-	font-size: 1.2rem;
-	font-weight: lighter;
 	height: 50px;
 	width: 200px;
-	border: $dark-border;
-	background: none;
 	margin: 0px 5px 0px 5px;
 }
-.btn:hover {
-	color: $white;
-	background: $dark;
-	font-weight: lighter;
+
+.hide {
+	display: none;
 }
+
 .navbar {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 10;
+	background: $dark;
 	display: flex;
-	flex-direction: row;
-	justify-content: center;
+	flex-direction: column;
 }
+
 .navbar-link {
-	color: $dark;
 	height: 16px;
-	margin: 0px 10px 0px 10px;
-	list-style-type: none;
+	margin: 20px 10px 20px 10px;
 }
+
 .logout-btn {
+	position: absolute;
+	right: 35px;
 	background: none;
 	border: none;
 	font-size: 1.4rem;
-	color: $dark;
-	font-family: $sansHeadline;
 }
-.logout-btn:hover {
-	color: $complementaryBlue;
-}
+
 .header-link {
 	color: $dark;
 	list-style-type: none;
-	text-align: center;
 	margin-right: 35px;
 	text-decoration: none;
-/*	letter-spacing: 2px;*/
 }
+
 .main-course-link {
-	color: $dark;
+	color: $white;
 	padding-left: 8px;
 	padding-right: 8px;
 	font-family: $sansHeadline;
@@ -64,22 +58,17 @@ html, body {
 	text-decoration: none;
 	letter-spacing: 3px;
 }
+
 .main-course-link:hover {
 	color: $complementaryBlue;
 }
 
-// home link
 .link {
-	color: $dark;
-	padding-left: 8px;
-	padding-right: 8px;
-	font-size: 1.4rem;
-	font-family: $sansHeadline;
-	text-decoration: none;
+	position: absolute;
+	left: 35px;
+	font-size: 1.4rem
 }
-.link:hover {
-	color: $complementaryBlue;
-}
+
 .food-headline {
 	color: $dark;
 	text-align: center;
@@ -93,10 +82,12 @@ html, body {
 	flex-direction: row;
 	justify-content: center;
 }
+
 .outer-wine-container {
 	margin-top: 0;
 	margin: 0 auto;
 }
+
 .wine-container {
 	margin-top: 35px;
 	text-align: center;
@@ -105,11 +96,13 @@ html, body {
 	flex-wrap: wrap;
 	justify-content: center;
 }
+
 .wine {
 	text-align: center;
 	display: flex;
 	flex-direction: column;
 }
+
 .wine-pic {
 	list-style-type: none;
 	margin: 0 auto;
@@ -118,9 +111,11 @@ html, body {
 	border: $dark-border;
 	border-radius: 100%;
 }
+
 .wine-pic-frame {
 	list-style-type: none;
 }
+
 .wine-details {
 	font-size: 1.3rem;
 	color: $dark;
@@ -131,24 +126,29 @@ html, body {
   font-family: $sansHeadline;
   letter-spacing: 2px;
 }
+
 .wine-view {
 	padding: 10px;
 	padding-bottom: 60px;
 }
+
 .auth-headline {
 	text-rendering: optimizeLegibility;
 	color: $dark;
 	font-size: 2.7rem;
 	font-family: $great-vibes;
 }
+
 .auth-form {
 	display: flex;
 	flex-direction: column;
 }
+
 .auth-label {
 	color: $dark;
 	font-family: $serifBody;
 }
+
 .auth-form-input {
 	font-size: 1.2rem;
 	font-weight: lighter;
@@ -161,6 +161,7 @@ html, body {
 	border: $dark-border;
 	text-align: center;
 }
+
 .auth-input-btn {
 	font-family: $serifBody;
 	font-size: 1.2rem;
@@ -172,41 +173,51 @@ html, body {
 	color: $dark;
 	border: $dark-border;
 }
+
 .login-error {
 	padding-top: 10px;
 	font-size: 1.1rem;
 	font-family: sans-serif;
 	color: $color-of-error;
 }
+
 .auth-input-btn:hover {
 	background-color: $dark-red-wine;
 	color: $white;
 }
+
 #email:hover {
 	background: $dark-red-wine;
 	color: hsl(36, 100%, 95%);
 	border: 2px solid hsl(20, 30%, 27%);
 }
+
 #password:hover {
 	background: $white-wine;
 }
+
 .auth-container {
 	text-align: center;
 }
+
 .login-switcher {
 	color: $dark;
 	font-family: sans-serif;
 }
+
 .login-switcher-link {
 	color: $dark;
 	text-decoration: underline;
 }
+
 .login-switcher-link:hover {
 	font-weight: bold;
 }
+
 .home-container {
 	text-align: center;
 }
+
 .home-headline {
 	margin-top: 0px;
 	padding-top: 150px;
@@ -214,6 +225,7 @@ html, body {
 	font-family: $sansHeadline;
 	font-size: 3.5rem;
 }
+
 .home-photo {
 	margin: 0;
 	background: url(/images/vinyardYo.jpg);
@@ -223,14 +235,17 @@ html, body {
 	background-repeat: no-repeat;
 	border: 2px solid $complementaryBlue;
 }
+
 .home-icon {
 	padding-top: 20px;
 	padding-right: 15px;
 }
+
 .home-icon-cuts {
 	padding-top: 19px;
 	padding-left: 4px;
 }
+
 .home-icon-container {
 	background: $white;
 	margin: 0 auto;
@@ -239,6 +254,7 @@ html, body {
 	height: 175px;
 	width: 175px;
 }
+
 .home-paragraph {
 	line-height: 50px;
 	color: $dark;
@@ -246,14 +262,17 @@ html, body {
 	font-family: $serifBody;
 	font-size: 1.3rem;
 }
+
 .wine-weight-em {
 	color: $dark-red-wine;
 }
+
 .footer {
 	width: 100%;
 	height: 60px;
 	background: $footer-background-color;
 }
+
 .logo-foot {
 	float: right;
 	margin-right: 10px;
@@ -261,6 +280,7 @@ html, body {
 	height: 50px;
 	width: 65px;
 }
+
 .fa {
 	text-align: center;
 	z-index: 1;
@@ -269,6 +289,7 @@ html, body {
 	height: 30px;
 	width: 30px;
 }
+
 .bandcamp:hover {
 	color: hsl(179, 100%, 44%);
 }

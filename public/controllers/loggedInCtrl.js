@@ -23,4 +23,9 @@ app.controller('loggedInCtrl', function($scope, $rootScope, $location, loggedInS
 			console.log('error in the logged in ctrl', err);
 		})
 	}
+
+	$('.startButton').on('click', function() {
+		$('.navbar').removeClass('hide');
+		$('.navbar-link').removeClass('hide');
+	});
 });

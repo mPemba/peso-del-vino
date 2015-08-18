@@ -18,7 +18,7 @@ app.config(function($routeProvider) {
 		// 		return authService.getUser();
 		// 	}
 		// }
-	});
+	})
 	.when('/home', {
 		templateUrl: '/tmpls/home.html',
 		controller: 'loggedInCtrl'

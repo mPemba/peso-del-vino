@@ -3,57 +3,45 @@ html, body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  height: 2000px;
   width: 100%;
-  background: #FAFBF8; }
+  background: #F2F2F2; }
 
 .btn {
-  color: #434E3C;
-  font-family: "Crimson Text", serif;
-  font-size: 1.2rem;
-  font-weight: lighter;
   height: 50px;
   width: 200px;
-  border: 2px solid #722F37;
-  background: none;
   margin: 0px 5px 0px 5px; }
 
-.btn:hover {
-  color: #FAFBF8;
-  background: #434E3C;
-  font-weight: lighter; }
+.hide {
+  display: none; }
 
 .navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  background: #333;
   display: flex;
-  flex-direction: row;
-  justify-content: center; }
+  flex-direction: column; }
 
 .navbar-link {
-  color: #434E3C;
   height: 16px;
-  margin: 0px 10px 0px 10px;
-  list-style-type: none; }
+  margin: 20px 10px 20px 10px; }
 
 .logout-btn {
+  position: absolute;
+  right: 35px;
   background: none;
   border: none;
-  font-size: 1.4rem;
-  color: #434E3C;
-  font-family: "Rosario", sans-serif; }
-
-.logout-btn:hover {
-  color: #949f9f; }
+  font-size: 1.4rem; }
 
 .header-link {
-  color: #434E3C;
+  color: #333;
   list-style-type: none;
-  text-align: center;
   margin-right: 35px;
-  text-decoration: none;
-  /*	letter-spacing: 2px;*/ }
+  text-decoration: none; }
 
 .main-course-link {
-  color: #434E3C;
+  color: #F2F2F2;
   padding-left: 8px;
   padding-right: 8px;
   font-family: "Rosario", sans-serif;
@@ -65,18 +53,12 @@ html, body {
   color: #949f9f; }
 
 .link {
-  color: #434E3C;
-  padding-left: 8px;
-  padding-right: 8px;
-  font-size: 1.4rem;
-  font-family: "Rosario", sans-serif;
-  text-decoration: none; }
-
-.link:hover {
-  color: #949f9f; }
+  position: absolute;
+  left: 35px;
+  font-size: 1.4rem; }
 
 .food-headline {
-  color: #434E3C;
+  color: #333;
   text-align: center;
   font-family: "Great Vibes", cursive;
   letter-spacing: 4px;
@@ -118,7 +100,7 @@ html, body {
 
 .wine-details {
   font-size: 1.3rem;
-  color: #434E3C;
+  color: #333;
   padding-top: 10px;
   margin: 0 auto;
   display: flex;
@@ -132,7 +114,7 @@ html, body {
 
 .auth-headline {
   text-rendering: optimizeLegibility;
-  color: #434E3C;
+  color: #333;
   font-size: 2.7rem;
   font-family: "Great Vibes", cursive; }
 
@@ -141,7 +123,7 @@ html, body {
   flex-direction: column; }
 
 .auth-label {
-  color: #434E3C;
+  color: #333;
   font-family: "Crimson Text", serif; }
 
 .auth-form-input {
@@ -164,7 +146,7 @@ html, body {
   width: 228px;
   height: 32px;
   background: none;
-  color: #434E3C;
+  color: #333;
   border: 2px solid #722F37; }
 
 .login-error {
@@ -175,7 +157,7 @@ html, body {
 
 .auth-input-btn:hover {
   background-color: #673432;
-  color: #FAFBF8; }
+  color: #F2F2F2; }
 
 #email:hover {
   background: #673432;
@@ -189,11 +171,11 @@ html, body {
   text-align: center; }
 
 .login-switcher {
-  color: #434E3C;
+  color: #333;
   font-family: sans-serif; }
 
 .login-switcher-link {
-  color: #434E3C;
+  color: #333;
   text-decoration: underline; }
 
 .login-switcher-link:hover {
@@ -205,7 +187,7 @@ html, body {
 .home-headline {
   margin-top: 0px;
   padding-top: 150px;
-  color: #434E3C;
+  color: #333;
   font-family: "Rosario", sans-serif;
   font-size: 3.5rem; }
 
@@ -227,7 +209,7 @@ html, body {
   padding-left: 4px; }
 
 .home-icon-container {
-  background: #FAFBF8;
+  background: #F2F2F2;
   margin: 0 auto;
   border: 2px solid #949f9f;
   border-radius: 100%;
@@ -236,7 +218,7 @@ html, body {
 
 .home-paragraph {
   line-height: 50px;
-  color: #434E3C;
+  color: #333;
   letter-spacing: 2px;
   font-family: "Crimson Text", serif;
   font-size: 1.3rem; }
@@ -259,7 +241,7 @@ html, body {
 .fa {
   text-align: center;
   z-index: 1;
-  color: #FAFBF8;
+  color: #F2F2F2;
   margin: 10px 20px 0px 60px;
   height: 30px;
   width: 30px; }
