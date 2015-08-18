@@ -6,7 +6,7 @@ var q = require('q');
 var schema = new Schema({
 	email: {type: String, unique: true},
 	password: String
-})
+});
 
 schema.pre('save', function(next) {
 	var user = this;
@@ -22,7 +22,7 @@ schema.pre('save', function(next) {
 			return next();
 		})
 	})
-})
+});
 
 schema.methods.comparePassword = function(pass) {
 	var dfd = q.defer();
@@ -34,6 +34,6 @@ schema.methods.comparePassword = function(pass) {
 		}
 	})
 	return dfd.promise;
-}
+};
 
 module.exports = mongoose.model('user', schema);

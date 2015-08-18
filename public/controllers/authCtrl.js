@@ -10,7 +10,8 @@ app.controller('authCtrl', function($scope, $rootScope, $location, authService) 
 		authService.getUser().then(function(data) {
 			$rootScope.user = data;
 		})
-	}
+	};
+
 	$scope.clickLogin = function() {
 		authService.login($scope.email, $scope.password).then(function() {
 			updateUser();
@@ -18,7 +19,8 @@ app.controller('authCtrl', function($scope, $rootScope, $location, authService) 
 		}).catch(function(err) {
 			$scope.loginError = true;
 		})
-	}
+	};
+
 	$scope.clickRegister = function() {
 		authService.register($scope.email, $scope.password).then(function() {
 			updateUser();
@@ -27,25 +29,12 @@ app.controller('authCtrl', function($scope, $rootScope, $location, authService) 
 		}).catch(function(err) {
 			$scope.regError = true;
 		})
-	}
+	};
+
 	$scope.changeState = function(newState) {
 		$scope.loginError = false;
 		$scope.regError = false;
 		$scope.state = newState;
-	}
+	};
 
-})
-
-	// $scope.credentials = {
-	// 	email: '',
-	// 	password: ''
-	// };
-
-	// $scope.login = function(credentials) {
-	// 	authService.login(credentials).then(function(user) {
-	// 		$rootScope.$broadcast(AUTH_EVENTS.loginSuccess);
-	// 		$scope.setCurrentUser(user);
-	// 	}, function() {
-	// 		$rootScope.$broadcast(AUTH_EVENTS.loginFailed);
-	// 	})
-	// }
+});

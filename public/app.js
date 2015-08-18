@@ -1,18 +1,12 @@
-var app = angular.module('vino', ["ngRoute", "ngAnimate"]);
+/*
 
-// app.constant('AUTH_EVENTS', {
-// 	loginSuccess: 'auth-login-success',
-// 	loginFailed: 'auth-login-failed',
-// 	logoutSuccess: 'auth-logout-success',
-// 	sessionTimeout: 'auth-session-timeout',
-// 	notAuthenticated: 'auth-not-authenticated',
-// 	notAuthorized: 'auth-not-authorized'
-// })
-// app.constant('USER_ROLES', {
-// 	all: '*',
-// 	admin: 'admin',
-// 	guest: 'guest'
-// })
+This file sets up the router for pesoDelVino. Direcitng what html files, and javascript controllers
+it should be looking at. - Pemba
+
+*/
+
+
+var app = angular.module('vino', ["ngRoute", "ngAnimate"]);
 
 app.config(function($routeProvider) {
 	$routeProvider
@@ -24,7 +18,7 @@ app.config(function($routeProvider) {
 		// 		return authService.getUser();
 		// 	}
 		// }
-	})
+	});
 	.when('/home', {
 		templateUrl: '/tmpls/home.html',
 		controller: 'loggedInCtrl'
@@ -72,16 +66,4 @@ app.config(function($routeProvider) {
 	.otherwise({
 		redirectTo: '/auth'
 	})
-})
-// .run(function($rootScope, AUTH_EVENTS, authService) {
-// 	$rootScope.on('$stateChangeStart', function(event, next) {
-// 		var authorizedRoles = next.data.authorizedRoles;
-// 		if (!authService.isAuthorized(authorizedRoles)) {
-// 			event.preventDefault();
-// 			//user not allowed
-// 			$rootScope.$broadcast(AUTH_EVENTS.notAuthorized);
-// 		} else {
-// 			$rootScope.$broadcast(AUTH_EVENTS.notAuthenticated);
-// 		}
-// 	})
-// })
+});

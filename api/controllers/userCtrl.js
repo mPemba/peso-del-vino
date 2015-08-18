@@ -11,7 +11,7 @@ module.exports = {
 			}
 			return res.json(userOnline);
 		})
-	}, 
+	},
 	get: function(req, res) {
 		User.find({}).exec().then(function(userOnline) {
 			console.log(userOnline);
@@ -21,4 +21,4 @@ module.exports = {
 	// currentUser: function(req, res) {
 	// 	return res.status(200).json(req.user);
 	// }
-}
+};

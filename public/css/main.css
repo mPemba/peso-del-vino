@@ -7,33 +7,6 @@ html, body {
   width: 100%;
   background: #FAFBF8; }
 
-.main-headline-container {
-  background-image: url("/images/grapesOne.jpg");
-  background-position: center;
-  height: 666px;
-  width: 100%;
-  text-align: center; }
-
-.main-headline {
-  font-family: "Rosario", sans-serif;
-  margin: 0 auto;
-  color: #FAFBF8;
-  padding-top: 250px;
-  letter-spacing: 10px;
-  font-weight: 300;
-  font-size: 6rem; }
-
-.main-sub-headline {
-  color: #434E3C;
-  font-family: "Crimson Text", serif;
-  font-size: 1.2rem;
-  letter-spacing: 1.5px; }
-
-.sub-headline-container {
-  color: #434E3C;
-  font-family: sans-serif;
-  text-align: center; }
-
 .btn {
   color: #434E3C;
   font-family: "Crimson Text", serif;
