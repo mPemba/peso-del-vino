@@ -1,8 +1,14 @@
+/*
+This file manages ajax calls from the beef section.
+
+weakly tossed together by salad maker Michael early in 20015
+
+Clean up August 18th 2015
+*/
+
 var app = angular.module('vino');
 
 app.controller('beefCtrl', function($scope, wineService) {
-
-
 
 $scope.getSimpleBeef = function() {
 	var grapeArray = [];
@@ -22,7 +28,7 @@ $scope.getSimpleBeef = function() {
 		}
 		$scope.wineData = grapeArray;
 	})
-}
+};
 
 $scope.getSlowCookBeef = function() {
 	var grapeArray = [];
@@ -41,7 +47,7 @@ $scope.getSlowCookBeef = function() {
 		}
 		$scope.wineData = grapeArray;
 	})
-}
+};
 
 $scope.getPrimeRib = function() {
 	var grapeArray = [];
@@ -60,7 +66,7 @@ $scope.getPrimeRib = function() {
 		}
 		$scope.wineData = grapeArray;
 	})
-}
+};
 
 $scope.getTenderloin = function() {
 	var grapeArray = [];
@@ -79,6 +85,6 @@ $scope.getTenderloin = function() {
 		}
 		$scope.wineData = grapeArray;
 	})
-}
+};
 
-})
+});

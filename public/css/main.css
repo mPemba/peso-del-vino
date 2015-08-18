@@ -96,7 +96,7 @@ html, body {
   text-decoration: none; }
 
 .food-headline {
-  padding: 11px 8px 20px 8px;
+  padding: 20px 8px 11px 8px;
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   color: #F2F2F2;
   font-size: 1.2rem;
@@ -117,7 +117,7 @@ html, body {
   width: 150px;
   color: #F2F2F2;
   background: #333;
-  margin: 0 auto;
+  margin: 20px 10px 20px 71px;
   padding-top: 25px;
   padding-bottom: 25px;
   display: block;
@@ -126,11 +126,18 @@ html, body {
   text-align: center;
   border: 0; }
 
+.cookingStyleBtn:hover {
+  background: #112342; }
+
+.cookingStyleBtn:focus {
+  border: 0; }
+
 .outer-wine-container {
   margin-top: 0;
   margin: 0 auto; }
 
 .wine-container {
+  margin-left: 160px;
   margin-top: 35px;
   text-align: center;
   display: flex;
@@ -155,22 +162,20 @@ html, body {
   list-style-type: none; }
 
 .wine-details {
+  text-align: center;
+  width: 500px;
   font-size: 1.3rem;
   color: #333;
   padding-top: 10px;
   margin: 0 auto;
-  display: flex;
   list-style-type: none;
-  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-  letter-spacing: 2px; }
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; }
 
 .wine-view {
   padding-bottom: 60px; }
 
 .auth-headline {
-  text-rendering: optimizeLegibility;
   color: #333;
-  font-size: 2.7rem;
   font-family: "Optima"; }
 
 .auth-form {
@@ -194,40 +199,21 @@ html, body {
   text-align: center; }
 
 .auth-input-btn {
-  font-family: "Crimson Text", serif;
-  font-size: 1.2rem;
   margin: 0 auto;
   margin-bottom: 10px;
   width: 228px;
   height: 32px;
   background: none;
-  color: #333;
-  border: 2px solid #722F37; }
+  color: #333; }
 
 .login-error {
-  padding-top: 10px;
-  font-size: 1.1rem;
-  font-family: sans-serif;
-  color: #991a2d; }
-
-.auth-input-btn:hover {
-  background-color: #673432;
-  color: #F2F2F2; }
-
-#email:hover {
-  background: #673432;
-  color: #fff5e6;
-  border: 2px solid #5a3e30; }
-
-#password:hover {
-  background: #d7b650; }
+  padding-top: 10px; }
 
 .auth-container {
   text-align: center; }
 
 .login-switcher {
-  color: #333;
-  font-family: sans-serif; }
+  color: #333; }
 
 .login-switcher-link {
   color: #333;
@@ -236,25 +222,14 @@ html, body {
 .login-switcher-link:hover {
   font-weight: bold; }
 
-.wine-weight-em {
-  color: #673432; }
-
 .footer {
   width: 100%;
-  height: 60px;
-  background: #949f9f; }
-
-.logo-foot {
-  float: right;
-  margin-right: 10px;
-  margin-top: 5px;
-  height: 50px;
-  width: 65px; }
+  height: 60px; }
 
 .fa {
   text-align: center;
   z-index: 1;
-  color: #F2F2F2;
+  color: #333;
   margin: 10px 20px 0px 60px;
   height: 30px;
   width: 30px; }
@@ -276,19 +251,5 @@ html, body {
 
 .linkedin:hover {
   color: #1fd169; }
-
-/*        EXPERIMENTS         */
-@media (max-width: 600px) {
-  .html, body {
-    width: 600px;
-    height: 100%; }
-
-  .main-headline-container {
-    width: 400px;
-    display: flex;
-    justify-content: center; } }
-@media (max-width: 375px) {
-  .main-headline-container {
-    width: 375px; } }
 
 /*# sourceMappingURL=main.css.map */
