@@ -40,9 +40,9 @@ $scope.getDulceDeLeche = function() {
 };
 
 $('.cookingStyleBtn').on('click', function() {
-	$('.form-control').slideUp('slow');
+	$('.cookingStyleNavbar').slideUp('slow');
 	$('.cookingStyleBtn').slideUp('slow');
-	$('.form-control').addClass('hide');
+	$('.cookingStyleNavbar').addClass('hide');
 	$('.cookingStyleBtn').addClass('hide');
 });
 

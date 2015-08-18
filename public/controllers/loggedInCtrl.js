@@ -39,7 +39,7 @@ app.controller('loggedInCtrl', function($scope, $rootScope, $location, loggedInS
 		$('.homeLink').fadeIn(500).removeClass('hide');
 		$('.navbar').fadeOut(500).addClass('hide');
 		$('.navbar-link').fadeOut(500).addClass('hide');
-		$('.form-control').fadeOut(500).addClass('hide');
+		$('.cookingStyleNavbar').fadeOut(500).addClass('hide');
 		$('.cookingStyleBtn').fadeOut(500).addClass('hide');
 		$('.homeHeadline').fadeIn(500).removeClass('hide');
 		$('.homeSubHeadline').fadeIn(500).removeClass('hide');
@@ -49,7 +49,7 @@ app.controller('loggedInCtrl', function($scope, $rootScope, $location, loggedInS
 	$('.main-course-link').on('click', function() {
 		$('.navbar').fadeOut(500).addClass("hide");
 		$('.navbar-link').fadeOut(500).addClass("hide");
-		$('.form-control').fadeIn(500);
+		$('.cookingStyleNavbar').fadeIn(500);
 		$('.cookingStyleBtn').fadeIn(500);
 	});
 

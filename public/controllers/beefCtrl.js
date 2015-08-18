@@ -80,9 +80,9 @@ $scope.getTenderloin = function() {
 };
 
 $('.cookingStyleBtn').on('click', function() {
-	$('.form-control').slideUp('slow');
+	$('.cookingStyleNavbar').slideUp('slow');
 	$('.cookingStyleBtn').fadeOut(300);
-	$('.form-control').addClass('hide');
+	$('.cookingStyleNavbar').addClass('hide');
 	$('.cookingStyleBtn').addClass('hide');
 });
 
