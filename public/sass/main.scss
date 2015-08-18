@@ -52,12 +52,12 @@ html, body {
 	padding: 10px 0px 10px 0px;
 	font-family: $mainCourse;
 	width: 150px;
-	border: 1.5px solid $dark;
+	border: 2px solid $dark;
 }
 
 .startButton:hover {
 	cursor: pointer;
-	background: #661412;
+	background: #960000;
 	color: $white;
 }
 
@@ -88,6 +88,17 @@ html, body {
   margin-top: 10px;
 }
 
+.logout-btn:hover {
+	color: $redWine;
+	cursor: pointer;
+}
+
+.logout-btn:focus {
+	outline: 0;
+	border-bottom: 1px solid $redWine;
+	color: $redWine;
+}
+
 .header-link {
 	color: $dark;
 	list-style-type: none;
@@ -104,6 +115,10 @@ html, body {
 	text-decoration: none;
 }
 
+.main-course-link:hover {
+	color: $whiteWine;
+}
+
 .homeLink {
 	position: absolute;
 	right: 35px;
@@ -112,6 +127,16 @@ html, body {
 	color: $white;
 	margin-top: 10px;
 	text-decoration: none;
+}
+
+.homeLink:hover {
+	color: $whiteWine;
+}
+
+.homeLink:focus {
+	outline: 0;
+	border-bottom: 1px solid $whiteWine;
+	color: $whiteWine;
 }
 
 .startOver {
@@ -124,8 +149,12 @@ html, body {
 	text-decoration: none;
 }
 
+.startOver:hover {
+	color: $whiteWine;
+}
+
 .food-headline {
-	padding: 20px 8px 11px 8px;
+	padding: 11px 8px 5px 8px;
 	font-family: $mainCourse;
 	color: $white;
 	font-size: 2rem;
@@ -156,6 +185,7 @@ html, body {
 
 .cookingStyleBtn:hover {
 	cursor: pointer;
+	color: $whiteWine;
 }
 
 .cookingStyleBtn:focus {
@@ -187,7 +217,7 @@ html, body {
 	margin: 0 auto;
 	height: 150px;
 	width: 150px;
-	border: $dark;
+	border: 2px solid $dark;
 	border-radius: 100%;
 }
 
@@ -213,7 +243,9 @@ html, body {
 
 .auth-headline {
 	color: $dark;
-	font-family: $mainCourse;
+	font-family: $sansHeadline;
+	font-size: 2rem;
+	margin-top: 50px;
 }
 
 .auth-form {
@@ -223,17 +255,63 @@ html, body {
 
 .auth-label {
 	color: $dark;
+	font-family: $mainCourse;
+}
+
+.auth-form-input {
+	height: 35px;
+	width: 300px;
+	margin: 0 auto;
+	margin-top: 20px;
+	font-family: $mainCourse;
+	font-size: 1.2rem;
+	color: $dark;
+	text-align: center;
+	background: $white;
+	border: 2px solid $dark;
+	border-radius: 0;
+}
+
+.auth-form-input:hover {
+	background: $white;
+	border: 2px solid $redWine;
+}
+
+.auth-form-input:focus {
+	outline: 0;
+	background: $redWine;
+	border: 2.5px solid $dark;
+	color: $white;
 }
 
 .auth-input-btn {
 	margin: 0 auto;
+	margin-top: 20px;
 	margin-bottom: 10px;
-	width: 228px;
-	height: 32px;
+	font-family: $sansHeadline;
+	font-size: 1.2rem;
+	width: 310px;
+	height: 40px;
+	background: $white;
+	border: 2px solid $dark;
+}
+
+.auth-input-btn:hover {
+	background: $redWine;
+	color: $white;
+}
+
+.auth-input-btn:focus {
+	outline: 0;
+	background: $redWine;
+	color: $white;
 }
 
 .login-error {
 	padding-top: 10px;
+	font-family: $mainCourse;
+	color: $redWine;
+	font-size: 1.2rem;
 }
 
 .auth-container {
@@ -241,8 +319,10 @@ html, body {
 }
 
 .login-switcher {
-	color: $dark
-};
+	color: $dark;
+	font-family: $mainCourse;
+	font-size: 1.2rem;
+}
 
 .login-switcher-link {
 	color: $dark;
@@ -297,7 +377,7 @@ THIS IS FOR TAB TAB TAB TABLETS TABLETS
 
 		.navbar {
 			width: 50%;
-			height: 100%;
+			height: 150%;
 			text-align: center;
 			position: absolute;
 			top: 0;
@@ -315,13 +395,24 @@ THIS IS FOR TAB TAB TAB TABLETS TABLETS
 
 		.cookingStyleNavbar {
 			width: 50%;
-			height: 100%;
+			height: 150%;
 		}
 
 		.navbar-link {
 			margin: 5px 0px 20px 0px;
 		}
 
+		.food-headline {
+			padding: 10px 8px 5px 8px;
+		}
+
+		.auth-form {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			width: 50%;
+			margin: 0 auto;
+		}
 }
 
 
@@ -331,7 +422,7 @@ THIS IS FOR MOBILE MOBILE MOBILE MOBILE
 
 @media only screen
   and (min-device-width: 320px)
-  and (max-device-width: 680px)
+  and (max-device-width: 736px)
   and (-webkit-min-device-pixel-ratio: 2) {
 
 		html, body {
@@ -398,6 +489,7 @@ THIS IS FOR MOBILE MOBILE MOBILE MOBILE
 
 		.navbar {
 			width: 65%;
+			height: 115%;
 			text-align: center;
 			position: absolute;
 			top: 0;
@@ -414,6 +506,8 @@ THIS IS FOR MOBILE MOBILE MOBILE MOBILE
 		.mainCourseContainerHeadline {
 			font-size: 1rem;
 			border-bottom: 1px solid $white;
+			padding-top: 4px;
+			padding-bottom: 7px;
 		}
 
 		.main-course-link {
@@ -432,7 +526,7 @@ THIS IS FOR MOBILE MOBILE MOBILE MOBILE
 			top: 0;
 			left: 0;
 			width: 65%;
-			height: 98%;
+			height: 150%;
 			display: block;
 			text-align: center;
 		}
@@ -474,6 +568,11 @@ THIS IS FOR MOBILE MOBILE MOBILE MOBILE
 			justify-content: center;
 			list-style-type: none;
 		  font-family: $mainCourse;
+		}
+
+		.auth-form-input {
+			width: 290px;
+			height: 30px;
 		}
 
 }

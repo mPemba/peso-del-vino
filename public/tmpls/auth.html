@@ -1,11 +1,10 @@
 <div class="auth-container animated fadeInUpBig">
-  <h1 class="auth-headline">Login or Register</h1>
+  <div class="auth-headline">Login or Register</div>
   <div>
     <form class="auth-form">
-      <label class="auth-label">Email:</label>
-      <input type="email" id="email" class="auth-form-input" ng-model="email"/>
-      <label class="auth-label">Password:</label>
-      <input type="password" id="password" class="auth-form-input" ng-model="password"/>
+      <input type="email" id="email" class="auth-form-input" ng-model="email" placeholder="email"/>
+
+      <input type="password" id="password" class="auth-form-input" ng-model="password" placeholder="password"/>
     </form>
 
     <div ng-if="state === 'register'">

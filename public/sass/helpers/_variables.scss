@@ -1,22 +1,16 @@
-$white: #F2F2F2;
 
-$complementaryBlue: #949f9f;
+/*
+ Setting up variables to be used in the main.scss file.
+*/
+
+$white: #F2F2F2;
 
 $dark: #333;
 
-$dark-border: 2px solid #722F37;
+$redWine: #960000;
 
-$dark-red-wine: hsl(2, 34%, 30%);
+$whiteWine: #eef4d4;
 
-$white-wine: hsl(45, 63%, 58%);
-
-// $great-vibes: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 $mainCourse: "Optima";
 
 $sansHeadline: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-
-$near-black: hsl(12, 8%, 13%);
-
-$footer-background-color: #949f9f;
-
-$color-of-error: hsl(351, 71%, 35%);
