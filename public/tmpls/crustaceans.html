@@ -1,28 +1,22 @@
 <div class="outer-wine-contatiner">
 
-  <h1 class="food-headline animated fadeIn">Seafood Pairing</h1>
+  <div class="foodHeadlineContainer">
+    <h1 class="food-headline animated fadeIn">Seafood Pairing</h1>
+  </div>
 
   <div class="form-control">
     <form>
-        <button class="btn animated fadeIn" ng-click="getCrab()">Crab</button>
-    </form>
-    <form>
-        <button class="btn animated fadeIn" ng-click="getLobster()">Lobster</button>
-    </form>
-    <form>
-    	  <button class="btn animated fadeIn" ng-click="getOyster()">Oyster</button>
-    </form>
-    <form>
-        <button class="btn animated fadeIn" ng-click="getShrimp()">Shrimp</button>
-    </form>
-    <form>
-        <button class="btn animated fadeIn" ng-click="getScallop()">Scallop</button>
+        <button class="cookingStyleBtn animated fadeIn" ng-click="getCrab()">Crab</button>
+        <button class="cookingStyleBtn animated fadeIn" ng-click="getLobster()">Lobster</button>
+    	  <button class="cookingStyleBtn animated fadeIn" ng-click="getOyster()">Oyster</button>
+        <button class="cookingStyleBtn animated fadeIn" ng-click="getShrimp()">Shrimp</button>
+        <button class="cookingStyleBtn animated fadeIn" ng-click="getScallop()">Scallop</button>
     </form>
   </div>
 
 
     <div class="wine-container" ng-repeat="key in wineData">
-      <div class="wine-container"> 
+      <div class="wine-container">
           <ul class="wine animated fadeInUpBig">
             <li class="wine-pic-frame"><img class="wine-pic" ng-src="{{key.image}}"></li>
             <li class="wine-details">{{key.name}}</li>

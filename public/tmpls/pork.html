@@ -3,21 +3,21 @@
 
   <div class="form-control">
     <form>
-        <button class="btn animated fadeIn" ng-click="getSausage()">Ham/ Sausage</button>
+        <button class="cookingStyleBtn animated fadeIn" ng-click="getSausage()">Ham/ Sausage</button>
     </form>
     <form>
-        <button class="btn animated fadeIn" ng-click="getSpicyPork()">Spicy</button>
+        <button class="cookingStyleBtn animated fadeIn" ng-click="getSpicyPork()">Spicy</button>
     </form>
     <form>
-        <button class="btn animated fadeIn" ng-click="getHerbPork()">Herb</button>
+        <button class="cookingStyleBtn animated fadeIn" ng-click="getHerbPork()">Herb</button>
     </form>
     <form>
-        <button class="btn animated fadeIn" ng-click="getBbqPork()">BBQ</button>
+        <button class="cookingStyleBtn animated fadeIn" ng-click="getBbqPork()">BBQ</button>
     </form>
  </div>
 
     <div class="wine-container" ng-repeat="key in wineData">
-      <div class="wine-container"> 
+      <div class="wine-container">
           <ul class="wine animated fadeInUpBig">
             <li class="wine-pic-frame"><img class="wine-pic" ng-src="{{key.image}}"></li>
             <li class="wine-details">{{key.name}}</li>

@@ -4,25 +4,25 @@
 
   <div class="form-control">
     <form>
-        <button class="btn animated fadeIn" ng-click="getRoot()">Mushroom/ Potato</button>
+        <button class="cookingStyleBtn animated fadeIn" ng-click="getRoot()">Mushroom/ Potato</button>
     </form>
     <form>
-        <button class="btn animated fadeIn" ng-click="getAvocado()">Avocado</button>
+        <button class="cookingStyleBtn animated fadeIn" ng-click="getAvocado()">Avocado</button>
     </form>
     <form>
-        <button class="btn animated fadeIn" ng-click="getEggplant()">Eggplant</button>
+        <button class="cookingStyleBtn animated fadeIn" ng-click="getEggplant()">Eggplant</button>
     </form>
     <form>
-        <button class="btn animated fadeIn" ng-click="getBean()">Bean/ Lentil</button>
+        <button class="cookingStyleBtn animated fadeIn" ng-click="getBean()">Bean/ Lentil</button>
     </form>
     <form>
-        <button class="btn animated fadeIn" ng-click="getTomato()">Tomato</button>
+        <button class="cookingStyleBtn animated fadeIn" ng-click="getTomato()">Tomato</button>
     </form>
   </div>
 
 
     <div class="wine-container" ng-repeat="key in wineData">
-      <div class="wine-container"> 
+      <div class="wine-container">
           <ul class="wine animated fadeInUpBig">
             <li class="wine-pic-frame"><img class="wine-pic" ng-src="{{key.image}}"></li>
             <li class="wine-details">{{key.name}}</li>

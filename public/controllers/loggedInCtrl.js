@@ -27,5 +27,19 @@ app.controller('loggedInCtrl', function($scope, $rootScope, $location, loggedInS
 	$('.startButton').on('click', function() {
 		$('.navbar').removeClass('hide');
 		$('.navbar-link').removeClass('hide');
+		$('.homeHeadline').addClass('hide');
+		$('.homeSubHeadline').addClass('hide');
+	});
+
+	$('.main-course-link').on('click', function() {
+		$('.navbar').addClass('hide');
+		$('.navbar-link').addClass('hide');
+	});
+
+	$('.homeLink').on('click', function() {
+		$('.navbar').addClass('hide');
+		$('.navbar-link').addClass('hide');
+		$('.homeHeadline').removeClass('hide');
+		$('.homeSubHeadline').removeClass('hide');
 	});
 });

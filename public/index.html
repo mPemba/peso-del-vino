@@ -11,12 +11,13 @@
 </head>
 <body ng-controller="loggedInCtrl">
 
-<div class="navbar animated fadeIn" ng-show="user">
-    <div id="homepage-link" class="header-link"> <a class="link" href="/#/home">Home</a> </div>
+<div class="topNav animated fadeIn" ng-show="user">
+    <div id="homepage-link" class="header-link"> <a class="homeLink" href="/#/home">Home</a> </div>
     <div class="header-link"> <button class="logout-btn" ng-click="logout()">Log Out</button> </div>
 </div>
 
 <div class="navbar hide" ng-show="user">
+    <div class="mainCourseContainerHeadline navbar-link hide">Select main dish</div>
     <div class="navbar-link hide"> <a class="main-course-link" href="/#/beef">Beef</a> </div>
     <div class="navbar-link hide"> <a class="main-course-link" href="/#/pork">Pork</a> </div>
     <div class="navbar-link hide"> <a class="main-course-link" href="/#/lamb">Lamb</a> </div>

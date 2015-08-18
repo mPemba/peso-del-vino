@@ -2,24 +2,68 @@
 
 html, body {
 	text-rendering: optimizeLegibility;
-	box-sizing: border-box;
+	// box-sizing: border-box;
 	margin: 0;
 	padding: 0;
-	width: 100%;
+	// width: 100%;
 	background: $white;
-}
-
-.btn {
-	height: 50px;
-	width: 200px;
-	margin: 0px 5px 0px 5px;
 }
 
 .hide {
 	display: none;
 }
 
+.home-container {
+	padding: 50px 0px 10px 65px;
+}
+
+.homeHeadline {
+	font-family: $sansHeadline;
+	font-size: 3rem;
+	color: $dark;
+	margin: 0;
+	padding: 0;
+}
+
+.homeSubHeadline {
+	font-family: $sansHeadline;
+	color: $dark;
+	margin-top: 10px;
+	margin-bottom: 20px;
+}
+
+.topNav {
+	background: $dark;
+	height: 55px;
+	width: 100%;
+}
+
+.mainCourseContainerHeadline {
+	margin: 0;
+	font-family: $sansHeadline;
+	color: $white;
+	font-size: 1.2rem;
+	border-bottom: 1px solid $white;
+	padding-bottom: 11px;
+}
+
+.startButton {
+	text-align: center;
+	padding: 10px 0px 10px 0px;
+	font-family: $sansHeadline;
+	width: 150px;
+	border: 1.5px solid $dark;
+}
+
+.startButton:hover {
+	cursor: pointer;
+	background: $dark;
+	color: $white;
+}
+
 .navbar {
+	width: 300px;
+	text-align: center;
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -30,16 +74,18 @@ html, body {
 }
 
 .navbar-link {
-	height: 16px;
 	margin: 20px 10px 20px 10px;
 }
 
 .logout-btn {
 	position: absolute;
-	right: 35px;
+	left: 35px;
 	background: none;
 	border: none;
 	font-size: 1.4rem;
+	font-family: $sansHeadline;
+	color: $white;
+  margin-top: 10px;
 }
 
 .header-link {
@@ -56,31 +102,50 @@ html, body {
 	font-family: $sansHeadline;
 	font-size: 1.2rem;
 	text-decoration: none;
-	letter-spacing: 3px;
 }
 
-.main-course-link:hover {
-	color: $complementaryBlue;
-}
-
-.link {
+.homeLink {
 	position: absolute;
-	left: 35px;
-	font-size: 1.4rem
+	right: 35px;
+	font-size: 1.4rem;
+	font-family: $sansHeadline;
+	color: $white;
+	margin-top: 10px;
+	text-decoration: none;
 }
 
 .food-headline {
-	color: $dark;
-	text-align: center;
-	font-family: $great-vibes;
-	letter-spacing: 4px;
-	font-weight: lighter;
-	font-size: 2rem;
+	padding: 11px 8px 20px 8px;
+	font-family: $sansHeadline;
+	color: $white;
+	font-size: 1.2rem;
+	border-bottom: 1px solid $white;
 }
+
 .form-control {
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 300px;
+	height: 666px;
+	background: $dark;
+	display: block;
+	text-align: center;
+}
+
+.cookingStyleBtn {
+	height: 35px;
+	width: 150px;
+	color: $white;
+	background: $dark;
+	margin: 0 auto;
+	padding-top: 25px;
+	padding-bottom: 25px;
+	display: block;
+	font-family: $sansHeadline;
+	font-size: 1.2rem;
+	text-align: center;
+	border: 0;
 }
 
 .outer-wine-container {
@@ -128,7 +193,6 @@ html, body {
 }
 
 .wine-view {
-	padding: 10px;
 	padding-bottom: 60px;
 }
 
@@ -136,7 +200,7 @@ html, body {
 	text-rendering: optimizeLegibility;
 	color: $dark;
 	font-size: 2.7rem;
-	font-family: $great-vibes;
+	font-family: $mainCourse;
 }
 
 .auth-form {
@@ -212,55 +276,6 @@ html, body {
 
 .login-switcher-link:hover {
 	font-weight: bold;
-}
-
-.home-container {
-	text-align: center;
-}
-
-.home-headline {
-	margin-top: 0px;
-	padding-top: 150px;
-	color: $dark;
-	font-family: $sansHeadline;
-	font-size: 3.5rem;
-}
-
-.home-photo {
-	margin: 0;
-	background: url(/images/vinyardYo.jpg);
-	height: 1600px;
-	width: 100%;
-	background-position: center;
-	background-repeat: no-repeat;
-	border: 2px solid $complementaryBlue;
-}
-
-.home-icon {
-	padding-top: 20px;
-	padding-right: 15px;
-}
-
-.home-icon-cuts {
-	padding-top: 19px;
-	padding-left: 4px;
-}
-
-.home-icon-container {
-	background: $white;
-	margin: 0 auto;
-	border: 2px solid $complementaryBlue;
-	border-radius: 100%;
-	height: 175px;
-	width: 175px;
-}
-
-.home-paragraph {
-	line-height: 50px;
-	color: $dark;
-	letter-spacing: 2px;
-	font-family: $serifBody;
-	font-size: 1.3rem;
 }
 
 .wine-weight-em {
