@@ -18,7 +18,8 @@ html, body {
   padding: 0; }
 
 .homeSubHeadline {
-  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-family: "Optima";
+  font-size: 1.2rem;
   color: #333;
   margin-top: 10px;
   margin-bottom: 20px; }
@@ -30,26 +31,27 @@ html, body {
 
 .mainCourseContainerHeadline {
   margin: 0;
-  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-family: "Optima";
   color: #F2F2F2;
   font-size: 1.2rem;
   border-bottom: 1px solid #F2F2F2;
-  padding-bottom: 11px; }
+  padding-top: 4px;
+  padding-bottom: 8px; }
 
 .startButton {
   text-align: center;
   padding: 10px 0px 10px 0px;
-  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-family: "Optima";
   width: 150px;
   border: 1.5px solid #333; }
 
 .startButton:hover {
   cursor: pointer;
-  background: #333;
+  background: #590917;
   color: #F2F2F2; }
 
 .navbar {
-  width: 300px;
+  width: 27%;
   text-align: center;
   position: absolute;
   top: 0;
@@ -60,7 +62,7 @@ html, body {
   flex-direction: column; }
 
 .navbar-link {
-  margin: 20px 10px 20px 10px; }
+  margin: 20px 0px 20px 0px; }
 
 .logout-btn {
   position: absolute;
@@ -82,7 +84,7 @@ html, body {
   color: #F2F2F2;
   padding-left: 8px;
   padding-right: 8px;
-  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-family: "Optima";
   font-size: 1.2rem;
   text-decoration: none; }
 
@@ -95,9 +97,18 @@ html, body {
   margin-top: 10px;
   text-decoration: none; }
 
+.startOver {
+  position: absolute;
+  right: 35px;
+  font-size: 1.4rem;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  color: #F2F2F2;
+  margin-top: 10px;
+  text-decoration: none; }
+
 .food-headline {
   padding: 20px 8px 11px 8px;
-  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-family: "Optima";
   color: #F2F2F2;
   font-size: 1.2rem;
   border-bottom: 1px solid #F2F2F2; }
@@ -117,27 +128,23 @@ html, body {
   width: 150px;
   color: #F2F2F2;
   background: #333;
-  margin: 20px 10px 20px 71px;
-  padding-top: 25px;
-  padding-bottom: 25px;
+  margin: 45px 0px 45px 71px;
   display: block;
-  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-family: "Optima";
   font-size: 1.2rem;
-  text-align: center;
   border: 0; }
 
 .cookingStyleBtn:hover {
-  background: #112342; }
+  cursor: pointer; }
 
 .cookingStyleBtn:focus {
-  border: 0; }
+  outline: 0; }
 
 .outer-wine-container {
   margin-top: 0;
   margin: 0 auto; }
 
 .wine-container {
-  margin-left: 160px;
   margin-top: 35px;
   text-align: center;
   display: flex;
@@ -155,7 +162,7 @@ html, body {
   margin: 0 auto;
   height: 150px;
   width: 150px;
-  border: 2px solid #722F37;
+  border: #333;
   border-radius: 100%; }
 
 .wine-pic-frame {
@@ -169,7 +176,7 @@ html, body {
   padding-top: 10px;
   margin: 0 auto;
   list-style-type: none;
-  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; }
+  font-family: "Optima"; }
 
 .wine-view {
   padding-bottom: 60px; }
@@ -183,28 +190,13 @@ html, body {
   flex-direction: column; }
 
 .auth-label {
-  color: #333;
-  font-family: "Crimson Text", serif; }
-
-.auth-form-input {
-  font-size: 1.2rem;
-  font-weight: lighter;
-  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-  margin: 0 auto;
-  margin-bottom: 10px;
-  width: 220px;
-  height: 30px;
-  background: none;
-  border: 2px solid #722F37;
-  text-align: center; }
+  color: #333; }
 
 .auth-input-btn {
   margin: 0 auto;
   margin-bottom: 10px;
   width: 228px;
-  height: 32px;
-  background: none;
-  color: #333; }
+  height: 32px; }
 
 .login-error {
   padding-top: 10px; }
@@ -251,5 +243,130 @@ html, body {
 
 .linkedin:hover {
   color: #1fd169; }
+
+/*
+RESPONSIVE EXPERIMENTS
+*/
+@media only screen and (min-device-width: 320px) and (max-device-width: 680px) and (-webkit-min-device-pixel-ratio: 2) {
+  html, body {
+    text-rendering: optimizeLegibility;
+    margin: 0;
+    padding: 0;
+    width: 100%; }
+
+  .home-container {
+    padding: 40px 0px 0px 45px; }
+
+  .homeHeadline {
+    font-size: 2.5rem;
+    margin: 0;
+    padding: 0; }
+
+  .homeSubHeadline {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    margin-bottom: 10px; }
+
+  .topNav {
+    background: #333;
+    height: 40px;
+    width: 100%; }
+
+  .homeLink {
+    position: absolute;
+    right: 35px;
+    font-size: 1em;
+    margin-top: 10px;
+    text-decoration: none; }
+
+  .startOver {
+    position: absolute;
+    right: 35px;
+    font-size: 1em;
+    margin-top: 10px;
+    text-decoration: none; }
+
+  .logout-btn {
+    position: absolute;
+    left: 15px;
+    background: none;
+    border: none;
+    font-size: 1em;
+    margin-top: 10px; }
+
+  .startButton {
+    text-align: center;
+    padding: 8px 0px 8px 0px;
+    font-size: 1rem;
+    width: 150px; }
+
+  .navbar {
+    width: 65%;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    display: flex;
+    flex-direction: column; }
+
+  .navbar-link {
+    margin: 8px 0px 20px 0px; }
+
+  .mainCourseContainerHeadline {
+    font-size: 1rem;
+    border-bottom: 1px solid #F2F2F2; }
+
+  .main-course-link {
+    font-size: 1rem;
+    text-decoration: none; }
+
+  .food-headline {
+    padding: 9px 8px 10px 8px;
+    font-size: 1rem;
+    border-bottom: 1px solid #F2F2F2; }
+
+  .form-control {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 65%;
+    height: 98%;
+    display: block;
+    text-align: center; }
+
+  .cookingStyleBtn {
+    margin: 20px 0px 20px 20px;
+    font-size: 1rem; }
+
+  .wine {
+    padding-left: 0px; }
+
+  .wine-container {
+    margin-top: 35px;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center; }
+
+  .wine-pic {
+    list-style-type: none;
+    margin: 0 auto;
+    height: 75px;
+    width: 75px;
+    border: #333;
+    border-radius: 100%; }
+
+  .wine-details {
+    width: 100%;
+    text-align: center;
+    font-size: 1rem;
+    color: #333;
+    padding-top: 5px;
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    font-family: "Optima"; } }
 
 /*# sourceMappingURL=main.css.map */

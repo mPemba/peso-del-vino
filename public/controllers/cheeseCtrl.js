@@ -18,7 +18,7 @@ $scope.getBleuCheese = function() {
 		}
 		$scope.wineData = grapeArray;
 	})
-}
+};
 
 $scope.getHardCheese = function() {
 	var grapeArray = [];
@@ -37,7 +37,7 @@ $scope.getHardCheese = function() {
 		}
 		$scope.wineData = grapeArray;
 	})
-}
+};
 
 $scope.getSoftCheese = function() {
 	var grapeArray = [];
@@ -56,6 +56,13 @@ $scope.getSoftCheese = function() {
 		}
 		$scope.wineData = grapeArray;
 	})
-}
+};
 
-})
+$('.cookingStyleBtn').on('click', function() {
+	$('.form-control').slideUp('slow');
+	$('.cookingStyleBtn').slideUp('slow');
+	$('.form-control').addClass('hide');
+	$('.cookingStyleBtn').addClass('hide');
+});
+
+});

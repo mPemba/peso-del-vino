@@ -8,15 +8,18 @@
   <link href='http://fonts.googleapis.com/css?family=Crimson+Text' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="css/main.css" type="text/css"/>
   <link rel="stylesheet" href="css/animate.css" type="text/css"/>
+  <link rel="shortcut icon" type="image/png" href="/images/favicon.ico"/>
+  <meta name="viewport" content="width=device-width, user-scalable=no" />
 </head>
 <body ng-controller="loggedInCtrl">
 
-<div class="topNav animated fadeIn" ng-show="user">
+<div class="topNav" ng-show="user">
     <div id="homepage-link" class="header-link"> <a class="homeLink" href="/#/home">Home</a> </div>
+    <div class="header-link"> <a class="startOver hide" href="/#/home">Start Over</a> </div>
     <div class="header-link"> <button class="logout-btn" ng-click="logout()">Log Out</button> </div>
 </div>
 
-<div class="navbar hide animate fadeInLeft" ng-show="user">
+<div class="navbar hide" ng-show="user">
     <div class="mainCourseContainerHeadline navbar-link hide">Select main dish</div>
     <div class="navbar-link hide"> <a class="main-course-link" href="/#/beef">Beef</a> </div>
     <div class="navbar-link hide"> <a class="main-course-link" href="/#/pork">Pork</a> </div>

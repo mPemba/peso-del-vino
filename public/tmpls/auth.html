@@ -2,10 +2,8 @@
   <h1 class="auth-headline">Login or Register</h1>
   <div>
     <form class="auth-form">
-
       <label class="auth-label">Email:</label>
       <input type="email" id="email" class="auth-form-input" ng-model="email"/>
-
       <label class="auth-label">Password:</label>
       <input type="password" id="password" class="auth-form-input" ng-model="password"/>
     </form>
@@ -20,15 +18,7 @@
       <div class="login-switcher">Need to <a class="login-switcher-link" ng-click="changeState('register')">register</a> instead?</div>
     </div>
 
-    <div class="login-error" ng-if="loginError">
-    Login failed.
-    </div>
-
-    <div class="login-error" ng-if="regError">
-    Registration failed.
-    </div>
+    <div class="login-error" ng-if="loginError">Login failed.</div>
+    <div class="login-error" ng-if="regError">Registration failed.</div>
   </div>
 </div>
-
-
-

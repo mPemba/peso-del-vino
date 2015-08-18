@@ -25,21 +25,39 @@ app.controller('loggedInCtrl', function($scope, $rootScope, $location, loggedInS
 	}
 
 	$('.startButton').on('click', function() {
-		$('.navbar').removeClass('hide');
-		$('.navbar-link').removeClass('hide');
-		$('.homeHeadline').addClass('hide');
-		$('.homeSubHeadline').addClass('hide');
+		$('.homeHeadline').fadeOut(500).addClass('hide');
+		$('.homeSubHeadline').fadeOut(500).addClass('hide');
+		$('.startButton').fadeOut(500).addClass('hide');
+		$('.homeLink').fadeOut(100).addClass('hide');
+		$('.startOver').fadeIn(500).removeClass('hide');
+		$('.navbar').slideDown("slow").removeClass('hide');
+		$('.navbar-link').slideDown("slow").removeClass('hide');
+	});
+
+	$('.startOver').on('click', function() {
+		$('.startOver').fadeOut(100).addClass('hide');
+		$('.homeLink').fadeIn(500).removeClass('hide');
+		$('.navbar').fadeOut(500).addClass('hide');
+		$('.navbar-link').fadeOut(500).addClass('hide');
+		$('.form-control').fadeOut(500).addClass('hide');
+		$('.cookingStyleBtn').fadeOut(500).addClass('hide');
+		$('.homeHeadline').fadeIn(500).removeClass('hide');
+		$('.homeSubHeadline').fadeIn(500).removeClass('hide');
+		$('.startButton').fadeIn(500).removeClass('hide');
 	});
 
 	$('.main-course-link').on('click', function() {
-		$('.navbar').addClass('hide');
-		$('.navbar-link').addClass('hide');
+		$('.navbar').fadeOut(500).addClass("hide");
+		$('.navbar-link').fadeOut(500).addClass("hide");
+		$('.form-control').fadeIn(500);
+		$('.cookingStyleBtn').fadeIn(500);
 	});
 
 	$('.homeLink').on('click', function() {
-		$('.navbar').addClass('hide');
-		$('.navbar-link').addClass('hide');
-		$('.homeHeadline').removeClass('hide');
-		$('.homeSubHeadline').removeClass('hide');
+		$('.navbar').fadeOut(500).addClass('hide');
+		$('.navbar-link').fadeOut(500).addClass('hide');
+		$('.homeHeadline').fadeIn(500).removeClass('hide');
+		$('.homeSubHeadline').fadeIn(500).removeClass('hide');
+		$('.startButton').fadeIn(500).removeClass('hide');
 	});
 });

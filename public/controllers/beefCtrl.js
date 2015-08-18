@@ -1,11 +1,3 @@
-/*
-This file manages ajax calls from the beef section.
-
-weakly tossed together by salad maker Michael early in 20015
-
-Clean up August 18th 2015
-*/
-
 var app = angular.module('vino');
 
 app.controller('beefCtrl', function($scope, wineService) {
@@ -86,5 +78,12 @@ $scope.getTenderloin = function() {
 		$scope.wineData = grapeArray;
 	})
 };
+
+$('.cookingStyleBtn').on('click', function() {
+	$('.form-control').slideUp('slow');
+	$('.cookingStyleBtn').fadeOut(300);
+	$('.form-control').addClass('hide');
+	$('.cookingStyleBtn').addClass('hide');
+});
 
 });

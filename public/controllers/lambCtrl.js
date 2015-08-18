@@ -19,7 +19,7 @@ $scope.getHerbLamb = function() {
 		}
 		$scope.wineData = grapeArray;
 	})
-}
+};
 
 $scope.getLambChop = function() {
 	var grapeArray = [];
@@ -38,7 +38,7 @@ $scope.getLambChop = function() {
 		}
 		$scope.wineData = grapeArray;
 	})
-}
+};
 
 $scope.getSlowCookLamb = function() {
 	var grapeArray = [];
@@ -57,7 +57,13 @@ $scope.getSlowCookLamb = function() {
 		}
 		$scope.wineData = grapeArray;
 	})
-}
+};
 
+$('.cookingStyleBtn').on('click', function() {
+	$('.form-control').slideUp('slow');
+	$('.cookingStyleBtn').slideUp('slow');
+	$('.form-control').addClass('hide');
+	$('.cookingStyleBtn').addClass('hide');
+});
 
-})
+});
