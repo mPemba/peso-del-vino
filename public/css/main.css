@@ -130,6 +130,25 @@ html, body {
 .startOver:hover {
   color: #eef4d4; }
 
+.startOver:focus {
+  outline: 0;
+  border-bottom: 1px solid #eef4d4;
+  color: #eef4d4; }
+
+.logoContainer {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  left: 140px;
+  margin-top: 10px; }
+
+.pesoDelVinoLogo {
+  width: 35px;
+  height: 35px; }
+
+.pesoDelVinoLogo:hover #path3013-copy {
+  fill: #eef4d4; }
+
 .food-headline {
   padding: 11px 8px 5px 8px;
   font-family: "Optima";
@@ -224,7 +243,7 @@ html, body {
   width: 300px;
   margin: 0 auto;
   margin-top: 20px;
-  font-family: "Optima";
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-size: 1.2rem;
   color: #333;
   text-align: center;

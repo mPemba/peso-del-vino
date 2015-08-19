@@ -153,6 +153,31 @@ html, body {
 	color: $whiteWine;
 }
 
+.startOver:focus {
+	outline: 0;
+	border-bottom: 1px solid $whiteWine;
+	color: $whiteWine;
+}
+
+.logoContainer {
+	width: 30px;
+	height: 30px;
+	position: absolute;
+	left: 140px;
+	margin-top: 10px;
+}
+
+.pesoDelVinoLogo {
+	width: 35px;
+	height: 35px;
+}
+
+.pesoDelVinoLogo:hover {
+	#path3013-copy {
+		fill: $whiteWine;
+	}
+}
+
 .food-headline {
 	padding: 11px 8px 5px 8px;
 	font-family: $mainCourse;
@@ -263,7 +288,7 @@ html, body {
 	width: 300px;
 	margin: 0 auto;
 	margin-top: 20px;
-	font-family: $mainCourse;
+	font-family: $sansHeadline;
 	font-size: 1.2rem;
 	color: $dark;
 	text-align: center;
