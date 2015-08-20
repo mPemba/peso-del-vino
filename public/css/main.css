@@ -146,8 +146,11 @@ html, body {
   width: 35px;
   height: 35px; }
 
-.pesoDelVinoLogo:hover #path3013-copy {
-  fill: #eef4d4; }
+.pesoDelVinoLogo:focus {
+  outline: 0; }
+
+.aboutMeText {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; }
 
 .food-headline {
   padding: 11px 8px 5px 8px;
@@ -303,39 +306,43 @@ html, body {
   font-weight: bold; }
 
 .footer {
+  margin-left: 56px;
   width: 100%;
-  height: 60px; }
+  height: 60px;
+  position: absolute;
+  bottom: 0;
+  left: 0; }
 
 .fa {
   text-align: center;
   z-index: 1;
   color: #333;
-  margin: 10px 20px 0px 60px;
+  margin: 10px 20px 10px 20px;
   height: 30px;
   width: 30px; }
 
-.bandcamp:hover {
-  color: #00e0dd; }
-
-.soundcloud:hover {
-  color: #ff4d00; }
-
-.facebook:hover {
-  color: #ec418e; }
-
 .github:hover {
-  color: #fdcb17; }
-
-.gPlus:hover {
-  color: #d73e33; }
+  color: #960000; }
 
 .linkedin:hover {
-  color: #1fd169; }
+  color: #960000; }
+
+.twitter:hover {
+  color: #960000; }
+
+.ello:hover {
+  color: #960000; }
+
+.bandcamp:hover {
+  color: #960000; }
+
+.soundcloud:hover {
+  color: #960000; }
 
 /*
 THIS IS FOR TAB TAB TAB TABLETS TABLETS
 */
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+@media only screen and (min-device-width: 736px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
   .navbar {
     width: 50%;
     height: 150%;
@@ -367,7 +374,22 @@ THIS IS FOR TAB TAB TAB TABLETS TABLETS
     flex-direction: column;
     justify-content: center;
     width: 50%;
-    margin: 0 auto; } }
+    margin: 0 auto; }
+
+  .pesoDelVinoLogo {
+    width: 30px;
+    height: 30px;
+    margin-left: 10px; }
+
+  .footer {
+    position: absolute;
+    bottom: 0; }
+
+  .fa {
+    height: 25px;
+    width: 25px;
+    margin-left: 5%;
+    margin-right: 5%; } }
 /*
 THIS IS FOR MOBILE MOBILE MOBILE MOBILE
 */
@@ -379,7 +401,7 @@ THIS IS FOR MOBILE MOBILE MOBILE MOBILE
     width: 100%; }
 
   .home-container {
-    padding: 40px 0px 0px 45px; }
+    padding: 40px 0px 0px 25px; }
 
   .homeHeadline {
     font-size: 2.5rem;
@@ -387,7 +409,7 @@ THIS IS FOR MOBILE MOBILE MOBILE MOBILE
     padding: 0; }
 
   .homeSubHeadline {
-    font-size: 1.2rem;
+    font-size: 1rem;
     margin-top: 10px;
     margin-bottom: 10px; }
 
@@ -426,7 +448,7 @@ THIS IS FOR MOBILE MOBILE MOBILE MOBILE
 
   .navbar {
     width: 65%;
-    height: 115%;
+    height: 150%;
     text-align: center;
     position: absolute;
     top: 0;
@@ -463,7 +485,7 @@ THIS IS FOR MOBILE MOBILE MOBILE MOBILE
     text-align: center; }
 
   .cookingStyleBtn {
-    margin: 20px 0px 20px 20px;
+    margin: 20px 0px 20px 0px;
     font-size: 1rem; }
 
   .wine {
@@ -482,7 +504,7 @@ THIS IS FOR MOBILE MOBILE MOBILE MOBILE
     margin: 0 auto;
     height: 75px;
     width: 75px;
-    border: #333;
+    border: 2px solid #333;
     border-radius: 100%; }
 
   .wine-details {
@@ -498,6 +520,15 @@ THIS IS FOR MOBILE MOBILE MOBILE MOBILE
 
   .auth-form-input {
     width: 290px;
-    height: 30px; } }
+    height: 30px; }
+
+  .pesoDelVinoLogo {
+    width: 22px;
+    height: 22px;
+    position: relative;
+    right: 40px; }
+
+  .footer {
+    display: none; } }
 
 /*# sourceMappingURL=main.css.map */
