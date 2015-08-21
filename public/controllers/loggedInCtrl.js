@@ -60,4 +60,5 @@ app.controller('loggedInCtrl', function($scope, $rootScope, $location, loggedInS
 		$('.homeSubHeadline').fadeIn(400).removeClass('hide');
 		$('.startButton').fadeIn(400).removeClass('hide');
 	});
+
 });

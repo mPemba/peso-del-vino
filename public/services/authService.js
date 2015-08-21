@@ -2,8 +2,6 @@ var app = angular.module('vino');
 
 app.service('authService', function($http, $q, $rootScope, $location) {
 
-	// var user;
-
 	this.register = function(email, password) {
 		var dfd = $q.defer();
 		$http({
@@ -23,22 +21,7 @@ app.service('authService', function($http, $q, $rootScope, $location) {
 			dfd.reject(err);
 		})
 		return dfd.promise;
-	}
-	// var getProfile = function() {
-	// 	var dfd = $q.defer();
-	// 	console.log('almost resolved');
-	// 	$http({
-	// 		method: 'GET',
-	// 		url: '/api/me'
-	// 	}).then(function(response) {
-	// 		user = response.data;
-	// 		$rootScope.$broadcast("updateUser")
-	// 		console.log('profile promise resolved');
-	// 		dfd.resolve(response.data);
-	// 	})
-	// 	return dfd.promise;
-	// }
-	// this.user;
+	};
 
 	this.login = function(email, password) {
 		var dfd = $q.defer();
@@ -50,14 +33,13 @@ app.service('authService', function($http, $q, $rootScope, $location) {
 				password: password
 			}
 		}).then(function(response) {
-			// getProfile();
 			dfd.resolve(response.data);
 		}).catch(function(err) {
 			console.log("error logging in");
 			dfd.reject(err);
 		})
 		return dfd.promise;
-	}
+	};
 
 	this.logMeOut = function() {
 		var dfd = $q.defer();
@@ -65,64 +47,21 @@ app.service('authService', function($http, $q, $rootScope, $location) {
 			method: 'GET',
 			url: '/api/logout'
 		}).then(function(response) {
-			// getProfile();
 			dfd.resolve(response.data);
 		})
 		return dfd.promise;
-	}
+	};
 
 	this.getUser = function() {
 		var dfd = $q.defer();
-		// console.log(user);
-		// if(user){
-		// 	dfd.resolve(user); 
-		// } else {
 		$http.get('/api/me')
 		.then(function(data){
 			user = data.data
-			// console.log(user)
 			dfd.resolve(user)
 		}, function(err){
-			// console.log(err)
 			$location.path('/auth');
 		})
-		// }
 		return dfd.promise;
-	}
+	};
 
-	// this.login = function(credentials) {
-	// 	return $http
-	// 	.post('/login', credentials)
-	// 	.then(function(res) {
-	// 		Session.create(res.data.id, res.data.user.id, res.data.user.role);
-	// 		return res.data.user;
-	// 	})
-	// }
-
-	// this.isAuthenticated = function() {
-	// 	return !!Session.userId;
-	// }
-
-	// this.isAuthorized = function(authorizedRoles) {
-	// 	if (!angular.isArray(authorizedRoles)) {
-	// 		authorizedRoles = [authorizedRoles];
-	// 	}
-	// 	return (this.isAuthenticated() && authorizedRoles.indexOf(Session.userRole) !== -1);
-	// };
-	// return authService;
-
- //    this.create = function(sessionId, userId, userRole) {
- //    	this.id = sessionId;
- //    	this.userId = userId;
- //    	this.userRole = userRole;
- //    }
-
- //    this.destroy = function() {
- //    	this.id = null;
- //    	this.userId = null;
- //    	this.userRole = null;
- //    }
- //    return this;
-
-
-})
+});

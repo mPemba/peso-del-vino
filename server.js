@@ -5,8 +5,6 @@ Designed and coded by Pemba a.k.a. Mike Slayer
 
 */
 
-
-
 var express = require('express');
 var session = require('express-session');
 var passport = require('passport');

@@ -1,23 +1,22 @@
 <div class="auth-container animated fadeInUpBig">
-  <div class="auth-headline">Login or Register</div>
-  <div>
-    <form class="auth-form">
+<div class="auth-headline">Login or Register</div>
+<div>
+  <form class="auth-form">
       <input type="email" id="email" class="auth-form-input" ng-model="email" placeholder="email"/>
-
       <input type="password" id="password" class="auth-form-input" ng-model="password" placeholder="password"/>
-    </form>
+  </form>
 
-    <div ng-if="state === 'register'">
+  <div ng-if="state === 'register'">
       <button class="auth-input-btn" ng-click="clickRegister()">Register</button>
       <div class="login-switcher">Need to <a class="login-switcher-link" ng-click="changeState('login')">login</a> instead?</div>
-    </div>
+  </div>
 
-    <div ng-if="state === 'login'">
+  <div ng-if="state === 'login'">
       <button class="auth-input-btn" ng-click="clickLogin()">Login</button>
       <div class="login-switcher">Need to <a class="login-switcher-link" ng-click="changeState('register')">register</a> instead?</div>
-    </div>
-
-    <div class="login-error" ng-if="loginError">Login failed.</div>
-    <div class="login-error" ng-if="regError">Registration failed.</div>
   </div>
+
+  <div class="login-error" ng-if="loginError">Login failed.</div>
+  <div class="login-error" ng-if="regError">Registration failed.</div>
+</div>
 </div>
