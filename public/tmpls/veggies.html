@@ -1,36 +1,25 @@
 <div class="outer-wine-contatiner">
 
-  <h1 class="food-headline animated fadeIn">Vegetable Pairing</h1>
+<div class="cookingStyleNavbar">
+  <form>
+    <div class="food-headline">Vegetable Pairing</div>
+    <div class="cookingStyleBtn" ng-click="getRoot()">Mushroom/ Potato</div>
+    <div class="cookingStyleBtn" ng-click="getAvocado()">Avocado</div>
+    <div class="cookingStyleBtn" ng-click="getEggplant()">Eggplant</div>
+    <div class="cookingStyleBtn" ng-click="getBean()">Bean/ Lentil</div>
+    <div class="cookingStyleBtn" ng-click="getTomato()">Tomato</div>
+  </form>
+</div>
 
-  <div class="form-control">
-    <form>
-        <button class="btn animated fadeIn" ng-click="getRoot()">Mushroom/ Potato</button>
-    </form>
-    <form>
-        <button class="btn animated fadeIn" ng-click="getAvocado()">Avocado</button>
-    </form>
-    <form>
-        <button class="btn animated fadeIn" ng-click="getEggplant()">Eggplant</button>
-    </form>
-    <form>
-        <button class="btn animated fadeIn" ng-click="getBean()">Bean/ Lentil</button>
-    </form>
-    <form>
-        <button class="btn animated fadeIn" ng-click="getTomato()">Tomato</button>
-    </form>
+<div class="wine-container" ng-repeat="key in wineData">
+  <div class="wine-container">
+      <ul class="wine animated fadeInUpBig">
+        <li class="wine-pic-frame"><img class="wine-pic" ng-src="{{key.image}}"></li>
+        <li class="wine-details">{{key.name}}</li>
+        <li class="wine-details">${{key.price}}</li>
+        <li class="wine-details">{{key.varietal}}</li>
+        <li class="wine-details">{{key.vintage}}</li>
+      </ul>
   </div>
-
-
-    <div class="wine-container" ng-repeat="key in wineData">
-      <div class="wine-container"> 
-          <ul class="wine animated fadeInUpBig">
-            <li class="wine-pic-frame"><img class="wine-pic" ng-src="{{key.image}}"></li>
-            <li class="wine-details">{{key.name}}</li>
-            <li class="wine-details">${{key.price}}</li>
-            <li class="wine-details">{{key.varietal}}</li>
-            <li class="wine-details">{{key.vintage}}</li>
-<!--             <li class="wine-details">{{key.region}}</li> -->
-          </ul>
-      </div>
-    </div>
+</div>
 </div>

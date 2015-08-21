@@ -1,36 +1,26 @@
 <div class="outer-wine-contatiner">
 
-  <h1 class="food-headline animated fadeIn">Seafood Pairing</h1>
+<div class="cookingStyleNavbar">
+  <form>
+    <div class="food-headline">Seafood Pairing</div>
+    <div class="cookingStyleBtn" ng-click="getCrab()">Crab</div>
+    <div class="cookingStyleBtn" ng-click="getLobster()">Lobster</div>
+    <div class="cookingStyleBtn" ng-click="getOyster()">Oyster</div>
+    <div class="cookingStyleBtn" ng-click="getShrimp()">Shrimp</div>
+    <div class="cookingStyleBtn" ng-click="getScallop()">Scallop</div>
+  </form>
+</div>
 
-  <div class="form-control">
-    <form>
-        <button class="btn animated fadeIn" ng-click="getCrab()">Crab</button>
-    </form>
-    <form>
-        <button class="btn animated fadeIn" ng-click="getLobster()">Lobster</button>
-    </form>
-    <form>
-    	  <button class="btn animated fadeIn" ng-click="getOyster()">Oyster</button>
-    </form>
-    <form>
-        <button class="btn animated fadeIn" ng-click="getShrimp()">Shrimp</button>
-    </form>
-    <form>
-        <button class="btn animated fadeIn" ng-click="getScallop()">Scallop</button>
-    </form>
-  </div>
-
-
-    <div class="wine-container" ng-repeat="key in wineData">
-      <div class="wine-container"> 
-          <ul class="wine animated fadeInUpBig">
-            <li class="wine-pic-frame"><img class="wine-pic" ng-src="{{key.image}}"></li>
-            <li class="wine-details">{{key.name}}</li>
-            <li class="wine-details">${{key.price}}</li>
-            <li class="wine-details">{{key.varietal}}</li>
-            <li class="wine-details">{{key.vintage}}</li>
+<div class="wine-container" ng-repeat="key in wineData">
+  <div class="wine-container">
+      <ul class="wine animated fadeInUpBig">
+        <li class="wine-pic-frame"><img class="wine-pic" ng-src="{{key.image}}"></li>
+        <li class="wine-details">{{key.name}}</li>
+        <li class="wine-details">${{key.price}}</li>
+        <li class="wine-details">{{key.varietal}}</li>
+        <li class="wine-details">{{key.vintage}}</li>
 <!--             <li class="wine-details">{{key.region}}</li> -->
-          </ul>
-      </div>
-    </div>
+      </ul>
+  </div>
+</div>
 </div>

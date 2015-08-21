@@ -18,7 +18,7 @@ $scope.getChocolate = function() {
 		}
 		$scope.wineData = grapeArray;
 	})
-}
+};
 
 $scope.getDulceDeLeche = function() {
 	var grapeArray = [];
@@ -37,7 +37,13 @@ $scope.getDulceDeLeche = function() {
 		}
 		$scope.wineData = grapeArray;
 	})
-}
+};
 
+$('.cookingStyleBtn').on('click', function() {
+	$('.cookingStyleNavbar').slideUp('slow');
+	$('.cookingStyleBtn').slideUp('slow');
+	$('.cookingStyleNavbar').addClass('hide');
+	$('.cookingStyleBtn').addClass('hide');
+});
 
-})
+});

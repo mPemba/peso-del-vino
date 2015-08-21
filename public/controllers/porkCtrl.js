@@ -19,7 +19,7 @@ $scope.getSausage = function() {
 		}
 		$scope.wineData = grapeArray;
 	})
-}
+};
 
 $scope.getSpicyPork = function() {
 	var grapeArray = [];
@@ -38,7 +38,7 @@ $scope.getSpicyPork = function() {
 		}
 		$scope.wineData = grapeArray;
 	})
-}
+};
 
 $scope.getHerbPork = function() {
 	var grapeArray = [];
@@ -57,7 +57,7 @@ $scope.getHerbPork = function() {
 		}
 		$scope.wineData = grapeArray;
 	})
-}
+};
 
 $scope.getBbqPork = function() {
 	var grapeArray = [];
@@ -76,6 +76,13 @@ $scope.getBbqPork = function() {
 		}
 		$scope.wineData = grapeArray;
 	})
-}
+};
 
-})
+$('.cookingStyleBtn').on('click', function() {
+	$('.cookingStyleNavbar').slideUp('slow');
+	$('.cookingStyleBtn').slideUp('slow');
+	$('.cookingStyleNavbar').addClass('hide');
+	$('.cookingStyleBtn').addClass('hide');
+});
+
+});

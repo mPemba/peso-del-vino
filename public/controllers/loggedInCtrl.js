@@ -2,29 +2,20 @@ var app = angular.module('vino');
 
 app.controller('loggedInCtrl', function($scope, $rootScope, $location, loggedInService, authService) {
 
-
 	var getUser = function() {
 		authService.getUser().then(function(res){
 			console.log(res)
 			$rootScope.user = res;
 		}, function(err) {
 			console.log(err)
-			// $rootScope.user = false;
 		});
-		// console.log($rootScope.user);
 	}
-	getUser();
-    
- //    $scope.$on('updateUser', function() {
- //    	console.log('reading broadcast');
- //    	getUser();
- //    })
 
+	getUser();
 
 	$scope.logout = function() {
 		authService.logMeOut().then(function(res) {
 			getUser();
-			// console.log(res)
 			$rootScope.user = false;
 			$location.path('/auth')
 		})
@@ -33,25 +24,41 @@ app.controller('loggedInCtrl', function($scope, $rootScope, $location, loggedInS
 		})
 	}
 
+	$('.startButton').on('click', function() {
+		$('.homeHeadline').fadeOut(400).addClass('hide');
+		$('.homeSubHeadline').fadeOut(400).addClass('hide');
+		$('.startButton').fadeOut(400).addClass('hide');
+		$('.homeLink').fadeOut(100).addClass('hide');
+		$('.startOver').fadeIn(400).removeClass('hide');
+		$('.navbar').slideDown("slow").removeClass('hide');
+		$('.navbar-link').slideDown("slow").removeClass('hide');
+	});
 
-})
+	$('.startOver').on('click', function() {
+		$('.startOver').fadeOut(100).addClass('hide');
+		$('.homeLink').fadeIn(400).removeClass('hide');
+		$('.navbar').fadeOut(400).addClass('hide');
+		$('.navbar-link').fadeOut(400).addClass('hide');
+		$('.cookingStyleNavbar').fadeOut(400).addClass('hide');
+		$('.cookingStyleBtn').fadeOut(400).addClass('hide');
+		$('.homeHeadline').fadeIn(400).removeClass('hide');
+		$('.homeSubHeadline').fadeIn(400).removeClass('hide');
+		$('.startButton').fadeIn(400).removeClass('hide');
+	});
 
+	$('.main-course-link').on('click', function() {
+		$('.navbar').fadeOut(800).addClass("hide");
+		$('.navbar-link').fadeOut(400).addClass("hide");
+		$('.cookingStyleNavbar').fadeIn(400);
+		$('.cookingStyleBtn').fadeIn(400);
+	});
 
+	$('.homeLink').on('click', function() {
+		$('.navbar').fadeOut(400).addClass('hide');
+		$('.navbar-link').fadeOut(400).addClass('hide');
+		$('.homeHeadline').fadeIn(400).removeClass('hide');
+		$('.homeSubHeadline').fadeIn(400).removeClass('hide');
+		$('.startButton').fadeIn(400).removeClass('hide');
+	});
 
-
-
-
-
-
-
-
-	// $scope.profile = app;
-
-	//define, and initialize current user on scope
-	// $scope.currentUser = null;
-	// $scope.userRoles = USER_ROLES;
-	// $scope.isAuthorized = authService.isAuthorized;
-
-	// $scope.setCurrentUser = function(user) {
-	// 	$scope.currentUser = user;
-	// }
+});

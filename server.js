@@ -1,3 +1,10 @@
+/*
+
+This sets up a server and security roles. Make sure this stays hidden.
+Designed and coded by Pemba a.k.a. Mike Slayer
+
+*/
+
 var express = require('express');
 var session = require('express-session');
 var passport = require('passport');
@@ -12,15 +19,6 @@ app.use(express.static(__dirname + '/public'));
 var User = require('./api/models/userModel');
 var userCtrl = require('./api/controllers/userCtrl');
 var profileCtrl = require('./api/controllers/profileCtrl.js');
-
-// var isAuthed = function(req, res, next) {
-//     if(req.session.logged_in === true) {
-//         return next();
-//     }
-//     else {
-//         return res.redirect('/auth');
-//     }
-// }
 
 app.use(bodyParser.json());
 app.use(session({
@@ -47,18 +45,20 @@ passport.use(new localStrategy({
 			return done(null, user);
 		})
 	})
-}))
+}));
+
 // passport.use(auth.strategy);
 passport.serializeUser(function(user, done) {
 	done(null, user);
-})
+});
+
 passport.deserializeUser(function(obj, done) {
 	done(null, obj);
-})
+});
 
 app.post('/api/auth', passport.authenticate('local'), function(req, res) {
 	return res.status(200).redirect('/#/home');
-})
+});
 
 app.post('/api/register', function(req, res) {
 	var newUser = new User(req.body);
@@ -71,14 +71,14 @@ app.post('/api/register', function(req, res) {
 		})
 		// return res.json(user);
 	})
-})
+});
 
 var isAuthed = function(req, res, next) {
 	if (!req.isAuthenticated()) {
 		return res.status(403).end();
 	}
 	return next();
-}
+};
 
 app.get('/api/me', function(req, res) {
 	if(req.user){
@@ -86,17 +86,17 @@ app.get('/api/me', function(req, res) {
 	} else {
 		res.status(404).end();
 	}
-})
+});
 
 app.get('/api/logout', function(req, res) {
 	req.logout();
 	res.status(200).end();
 	// res.redirect('/auth');
-})
+});
 // app.get('/api/profile', isAuthed, profileCtrl.profile);
 // app.get('/api/user', isAuthed, userCtrl.get);
 
 
 app.listen(port, function() {
 	console.log('listening on port ' + port);
-})
+});

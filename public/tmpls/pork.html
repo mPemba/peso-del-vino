@@ -1,31 +1,24 @@
 <div class="outer-wine-contatiner">
-  <h1 class="food-headline animated fadeIn">Pork Pairing</h1>
 
-  <div class="form-control">
+  <div class="cookingStyleNavbar">
     <form>
-        <button class="btn animated fadeIn" ng-click="getSausage()">Ham/ Sausage</button>
-    </form>
-    <form>
-        <button class="btn animated fadeIn" ng-click="getSpicyPork()">Spicy</button>
-    </form>
-    <form>
-        <button class="btn animated fadeIn" ng-click="getHerbPork()">Herb</button>
-    </form>
-    <form>
-        <button class="btn animated fadeIn" ng-click="getBbqPork()">BBQ</button>
+      <div class="food-headline">Pork Pairing</div>
+      <div class="cookingStyleBtn" ng-click="getSausage()">Ham/ Sausage</div>
+      <div class="cookingStyleBtn" ng-click="getSpicyPork()">Spicy</div>
+      <div class="cookingStyleBtn" ng-click="getHerbPork()">Herb</div>
+      <div class="cookingStyleBtn" ng-click="getBbqPork()">BBQ</div>
     </form>
  </div>
 
-    <div class="wine-container" ng-repeat="key in wineData">
-      <div class="wine-container"> 
-          <ul class="wine animated fadeInUpBig">
-            <li class="wine-pic-frame"><img class="wine-pic" ng-src="{{key.image}}"></li>
-            <li class="wine-details">{{key.name}}</li>
-            <li class="wine-details">${{key.price}}</li>
-            <li class="wine-details">{{key.varietal}}</li>
-            <li class="wine-details">{{key.vintage}}</li>
-<!--             <li class="wine-details">{{key.region}}</li> -->
-          </ul>
-      </div>
-    </div>
+<div class="wine-container" ng-repeat="key in wineData">
+  <div class="wine-container">
+      <ul class="wine animated fadeInUpBig">
+        <li class="wine-pic-frame"><img class="wine-pic" ng-src="{{key.image}}"></li>
+        <li class="wine-details">{{key.name}}</li>
+        <li class="wine-details">${{key.price}}</li>
+        <li class="wine-details">{{key.varietal}}</li>
+        <li class="wine-details">{{key.vintage}}</li>
+      </ul>
+  </div>
+</div>
 </div>

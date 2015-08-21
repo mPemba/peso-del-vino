@@ -19,7 +19,7 @@ $scope.getRichFish = function() {
 		}
 		$scope.wineData = grapeArray;
 	})
-}
+};
 
 $scope.getLemonFish = function() {
 	var grapeArray = [];
@@ -38,7 +38,7 @@ $scope.getLemonFish = function() {
 		}
 		$scope.wineData = grapeArray;
 	})
-}
+};
 
 $scope.getGrilledSalm = function() {
 	var grapeArray = [];
@@ -76,7 +76,7 @@ $scope.getBlackSalm = function() {
 		}
 		$scope.wineData = grapeArray;
 	})
-}
+};
 
 $scope.getRichSalm = function() {
 	var grapeArray = [];
@@ -95,6 +95,13 @@ $scope.getRichSalm = function() {
 		}
 		$scope.wineData = grapeArray;
 	})
-}
+};
 
-})
+$('.cookingStyleBtn').on('click', function() {
+	$('.cookingStyleNavbar').slideUp('slow');
+	$('.cookingStyleBtn').slideUp('slow');
+	$('.cookingStyleNavbar').addClass('hide');
+	$('.cookingStyleBtn').addClass('hide');
+});
+
+});

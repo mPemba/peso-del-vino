@@ -19,7 +19,8 @@ $scope.getRoot = function() {
     }
     $scope.wineData = grapeArray;
   })
-}
+};
+
 $scope.getAvocado = function() {
   var grapeArray = [];
   wineService.getAvocadoWine($scope.grape).then(function(res) {
@@ -37,7 +38,8 @@ $scope.getAvocado = function() {
     }
     $scope.wineData = grapeArray;
   })
-}
+};
+
 $scope.getEggplant = function() {
   var grapeArray = [];
   wineService.getEggplantWine($scope.grape).then(function(res) {
@@ -55,7 +57,8 @@ $scope.getEggplant = function() {
     }
     $scope.wineData = grapeArray;
   })
-}
+};
+
 $scope.getBean = function() {
   var grapeArray = [];
   wineService.getBeanWine($scope.grape).then(function(res) {
@@ -73,7 +76,8 @@ $scope.getBean = function() {
     }
     $scope.wineData = grapeArray;
   })
-}
+};
+
 $scope.getTomato = function() {
   var grapeArray = [];
   wineService.getTomatoWine($scope.grape).then(function(res) {
@@ -91,8 +95,13 @@ $scope.getTomato = function() {
     }
     $scope.wineData = grapeArray;
   })
-}
+};
 
+$('.cookingStyleBtn').on('click', function() {
+ $('.cookingStyleNavbar').slideUp('slow');
+ $('.cookingStyleBtn').slideUp('slow');
+ $('.cookingStyleNavbar').addClass('hide');
+ $('.cookingStyleBtn').addClass('hide');
+});
 
-
-})
+});

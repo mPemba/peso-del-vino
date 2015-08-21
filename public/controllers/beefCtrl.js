@@ -2,8 +2,6 @@ var app = angular.module('vino');
 
 app.controller('beefCtrl', function($scope, wineService) {
 
-
-
 $scope.getSimpleBeef = function() {
 	var grapeArray = [];
 	wineService.getSimpleBeefWine($scope.grape).then(function(res) {
@@ -22,7 +20,7 @@ $scope.getSimpleBeef = function() {
 		}
 		$scope.wineData = grapeArray;
 	})
-}
+};
 
 $scope.getSlowCookBeef = function() {
 	var grapeArray = [];
@@ -41,7 +39,7 @@ $scope.getSlowCookBeef = function() {
 		}
 		$scope.wineData = grapeArray;
 	})
-}
+};
 
 $scope.getPrimeRib = function() {
 	var grapeArray = [];
@@ -60,7 +58,7 @@ $scope.getPrimeRib = function() {
 		}
 		$scope.wineData = grapeArray;
 	})
-}
+};
 
 $scope.getTenderloin = function() {
 	var grapeArray = [];
@@ -79,6 +77,13 @@ $scope.getTenderloin = function() {
 		}
 		$scope.wineData = grapeArray;
 	})
-}
+};
 
-})
+$('.cookingStyleBtn').on('click', function() {
+	$('.cookingStyleNavbar').slideUp('slow');
+	$('.cookingStyleBtn').fadeOut(300);
+	$('.cookingStyleNavbar').addClass('hide');
+	$('.cookingStyleBtn').addClass('hide');
+});
+
+});

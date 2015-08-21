@@ -1,29 +1,24 @@
 <div class="outer-wine-contatiner">
 
-  <h1 class="food-headline animated fadeIn">Cheese Pairing</h1>
-
-  <div class="form-control">
-    <form>
-        <button class="btn animated fadeIn" ng-click="getBleuCheese()">Bleu</button>
-    </form>
-    <form>
-        <button class="btn animated fadeIn" ng-click="getHardCheese()">Hard</button>
-    </form>
-    <form>
-        <button class="btn animated fadeIn" ng-click="getSoftCheese()">Soft</button>
-    </form>
+<div class="cookingStyleNavbar">
+  <form>
+    <div class="food-headline">Cheese Pairing</div>
+    <div class="cookingStyleBtn" ng-click="getBleuCheese()">Bleu</div>
+    <div class="cookingStyleBtn" ng-click="getHardCheese()">Hard</div>
+    <div class="cookingStyleBtn" ng-click="getSoftCheese()">Soft</div>
+  </form>
   </div>
 
-    <div class="wine-container" ng-repeat="key in wineData">
-      <div class="wine-container"> 
-          <ul class="wine animated fadeInUpBig">
+  <div class="wine-container" ng-repeat="key in wineData">
+      <div class="wine-container">
+        <ul class="wine animated fadeInUpBig">
             <li class="wine-pic-frame"><img class="wine-pic" ng-src="{{key.image}}"></li>
             <li class="wine-details">{{key.name}}</li>
             <li class="wine-details">${{key.price}}</li>
             <li class="wine-details">{{key.varietal}}</li>
             <li class="wine-details">{{key.vintage}}</li>
 <!--             <li class="wine-details">{{key.region}}</li> -->
-          </ul>
+        </ul>
       </div>
-    </div>
+  </div>
 </div>

@@ -1,34 +1,24 @@
 <div class="outer-wine-contatiner">
 
-<h1 class="food-headline animated fadeIn">Pasta Pairing</h1>
+<div class="cookingStyleNavbar">
+    <form>
+      <div class="food-headline">Pasta Pairing</div>
+      <div class="cookingStyleBtn" ng-click="getLasagne()">Lasagne</div>
+      <div class="cookingStyleBtn" ng-click="getWhitePasta()">Cream Sauce</div>
+      <div class="cookingStyleBtn" ng-click="getTomatoPasta()">Tomato Sauce</div>
+      <div class="cookingStyleBtn" ng-click="getFishPasta()">Pasta with Fish</div>
+    </form>
+</div>
 
-  <div class="form-control">
-    <form>
-        <button class="btn animated fadeIn" ng-click="getLasagne()">Lasagne</button>
-    </form>
-    <form>
-        <button class="btn animated fadeIn" ng-click="getWhitePasta()">Cream Sauce</button>
-    </form>
-    <form>
-        <button class="btn animated fadeIn" ng-click="getTomatoPasta()">Tomato Sauce</button>
-    </form>
-    <form>
-        <button class="btn animated fadeIn" ng-click="getFishPasta()">Pasta with Fish</button>
-    </form>
+<div class="wine-container" ng-repeat="key in wineData">
+  <div class="wine-container">
+      <ul class="wine animated fadeInUpBig">
+        <li class="wine-pic-frame"><img class="wine-pic" ng-src="{{key.image}}"></li>
+        <li class="wine-details">{{key.name}}</li>
+        <li class="wine-details">${{key.price}}</li>
+        <li class="wine-details">{{key.varietal}}</li>
+        <li class="wine-details">{{key.vintage}}</li>
+      </ul>
   </div>
-
-
-    <div class="wine-container" ng-repeat="key in wineData">
-      <div class="wine-container"> 
-          <ul class="wine animated fadeInUpBig">
-            <li class="wine-pic-frame"><img class="wine-pic" ng-src="{{key.image}}"></li>
-            <li class="wine-details">{{key.name}}</li>
-            <li class="wine-details">${{key.price}}</li>
-            <li class="wine-details">{{key.varietal}}</li>
-            <li class="wine-details">{{key.vintage}}</li>
-<!--             <li class="wine-details">{{key.region}}</li> -->
-          </ul>
-      </div>
-    </div>
-
+</div>
 </div>

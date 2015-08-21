@@ -19,7 +19,7 @@ $scope.getLasagne = function() {
 		}
 		$scope.wineData = grapeArray;
 	})
-}
+};
 
 $scope.getWhitePasta = function() {
 	var grapeArray = [];
@@ -38,7 +38,8 @@ $scope.getWhitePasta = function() {
 		}
 		$scope.wineData = grapeArray;
 	})
-}
+};
+
 $scope.getTomatoPasta = function() {
 	var grapeArray = [];
 	wineService.getTomatoPastaWine($scope.grape).then(function(res) {
@@ -56,7 +57,8 @@ $scope.getTomatoPasta = function() {
 		}
 		$scope.wineData = grapeArray;
 	})
-}
+};
+
 $scope.getFishPasta = function() {
 	var grapeArray = [];
 	wineService.getFishPastaWine($scope.grape).then(function(res) {
@@ -74,5 +76,13 @@ $scope.getFishPasta = function() {
 		}
 		$scope.wineData = grapeArray;
 	})
-}
-})
+};
+
+$('.cookingStyleBtn').on('click', function() {
+	$('.cookingStyleNavbar').slideUp('slow');
+	$('.cookingStyleBtn').slideUp('slow');
+	$('.cookingStyleNavbar').addClass('hide');
+	$('.cookingStyleBtn').addClass('hide');
+});
+
+});

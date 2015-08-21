@@ -19,7 +19,7 @@ $scope.getCrab = function() {
 		}
 		$scope.wineData = grapeArray;
 	})
-}
+};
 
 $scope.getLobster = function() {
 	var grapeArray = [];
@@ -38,7 +38,7 @@ $scope.getLobster = function() {
 		}
 		$scope.wineData = grapeArray;
 	})
-}
+};
 
 $scope.getOyster = function() {
 	var grapeArray = [];
@@ -75,7 +75,8 @@ $scope.getShrimp = function() {
 		}
 		$scope.wineData = grapeArray;
 	})
-}
+};
+
 $scope.getScallop = function() {
 	var grapeArray = [];
 	wineService.getScallopWine($scope.grape).then(function(res) {
@@ -93,5 +94,13 @@ $scope.getScallop = function() {
 		}
 		$scope.wineData = grapeArray;
 	})
-}
-})
+};
+
+$('.cookingStyleBtn').on('click', function() {
+	$('.cookingStyleNavbar').slideUp('slow');
+	$('.cookingStyleBtn').slideUp('slow');
+	$('.cookingStyleNavbar').addClass('hide');
+	$('.cookingStyleBtn').addClass('hide');
+});
+
+});
