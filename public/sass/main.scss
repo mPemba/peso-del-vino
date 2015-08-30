@@ -418,7 +418,7 @@ html, body {
 
 
 /*
-THIS IS FOR TAB TAB TAB TABLETS TABLETS
+THIS IS FOR TABLETS
 */
 
 @media only screen
@@ -486,7 +486,7 @@ THIS IS FOR TAB TAB TAB TABLETS TABLETS
 
 
 /*
-THIS IS FOR MOBILE MOBILE MOBILE MOBILE
+THIS IS FOR MOBILE
 */
 
 @media only screen
@@ -516,6 +516,10 @@ THIS IS FOR MOBILE MOBILE MOBILE MOBILE
 			font-size: 1rem;
 			margin-top: 10px;
 			margin-bottom: 10px;
+		}
+
+		.aboutMeText {
+			font-size: .6rem;
 		}
 
 		.topNav {
