@@ -340,7 +340,7 @@ html, body {
   color: #960000; }
 
 /*
-THIS IS FOR TAB TAB TAB TABLETS TABLETS
+THIS IS FOR TABLETS
 */
 @media only screen and (min-device-width: 736px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
   .navbar {
@@ -391,7 +391,7 @@ THIS IS FOR TAB TAB TAB TABLETS TABLETS
     margin-left: 5%;
     margin-right: 5%; } }
 /*
-THIS IS FOR MOBILE MOBILE MOBILE MOBILE
+THIS IS FOR MOBILE
 */
 @media only screen and (min-device-width: 320px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 2) {
   html, body {
@@ -412,6 +412,9 @@ THIS IS FOR MOBILE MOBILE MOBILE MOBILE
     font-size: 1rem;
     margin-top: 10px;
     margin-bottom: 10px; }
+
+  .aboutMeText {
+    font-size: .6rem; }
 
   .topNav {
     background: #333;
